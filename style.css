@@ -21,7 +21,6 @@ body {
   width: 100%;
   height: 100%;
   font-kerning: normal;
-  color: #d7dddf;
   font-size: 19px;
   text-rendering: optimizeLegibility;
   font-style: normal;
@@ -32,7 +31,6 @@ body {
 body {
   padding: 0;
   margin: 0;
-  background: #171920;
   font-family: 'ISO', Courier, monospace;
   font-weight: normal;
 }
@@ -70,14 +68,12 @@ ul {
   margin: 0 0 20px 0;
   padding: 0;
   list-style: none;
-  color: #82959b;
 }
 
 ul p {
   margin: 0 0 20px 0;
   padding: 0;
   list-style: none;
-  color: #d7dddf;
 }
 
 ul .blog-date {
@@ -90,14 +86,8 @@ ul .project-company {
   display: inline-block;
 }
 
-ul a {
-  color: #d7dddf;
-}
-
 a {
   text-decoration: none;
-  color: #82959b;
-  border-bottom: solid 2px rgba(130, 149, 155, 0);
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -105,98 +95,10 @@ a {
 }
 
 a:hover {
-  border-bottom: solid 2px #82959b;
+  border-bottom: solid 2px;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-
-a.brand-fb {
-  color: #3B5998;
-}
-
-a.brand-fb:hover {
-  color: #3B5998;
-}
-
-a.brand-wk {
-  color: #eaecf0;
-}
-
-a.brand-wk:hover {
-  border-bottom-color: #eaecf0;
-}
-
-a.brand-nw {
-  color: #F7A100;
-}
-
-a.brand-nw:hover {
-  border-bottom-color: #F7A100;
-}
-
-a.brand-yt {
-  color: #ff0000;
-}
-
-a.brand-yt:hover {
-  border-bottom-color: #ff0000;
-}
-
-a.brand-ad {
-  color: #A4C639;
-}
-
-a.brand-ad:hover {
-  border-bottom-color: #A4C639;
-}
-
-a.brand-io {
-  color: #5fc9f8;
-}
-
-a.brand-io:hover {
-  border-bottom-color: #5fc9f8;
-}
-
-a.brand-ra {
-  color: #00bcd4;
-}
-
-a.brand-ra:hover {
-  border-bottom-color: #00bcd4;
-}
-
-a.brand-tw {
-  color: #2aa3ef;
-}
-
-a.brand-tw:hover {
-  border-bottom-color: #2aa3ef;
-}
-
-a.brand-li {
-  color: #228fcb;
-}
-
-a.brand-li:hover {
-  border-bottom-color: #228fcb;
-}
-
-a.brand-fw {
-  color: #dd080f;
-}
-
-a.brand-fw:hover {
-  border-bottom-color: #dd080f;
-}
-
-a.brand-rd {
-  color: #b62fce;
-}
-
-a.brand-rd:hover {
-  border-bottom-color: #b62fce;
 }
 
 .caps {
