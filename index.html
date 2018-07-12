@@ -21,9 +21,25 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="style.min.css">
-	<link rel="stylesheet" type="text/css" href="theme.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="style.min.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="theme.min.css"> -->
 
+	<script>
+	// make a stylesheet link
+	var styleCSS = document.createElement( "link" );
+	styleCSS.rel = "stylesheet";
+	styleCSS.href = "style.min.css";
+	// insert it at the end of the head in a legacy-friendly manner
+	document.head.insertBefore( styleCSS, document.head.childNodes[ document.head.childNodes.length - 1 ].nextSibling );
+	
+		// make a stylesheet link
+	var themeCSS = document.createElement( "link" );
+	themeCSS.rel = "stylesheet";
+	themeCSS.href = "theme.min.css";
+	// insert it at the end of the head in a legacy-friendly manner
+	document.head.insertBefore( themeCSS, document.head.childNodes[ document.head.childNodes.length - 1 ].nextSibling );
+	</script>
+	
 	<!-- <script src="jquery.js"></script> -->
 	<script async src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
 	<!-- <script src="unorphanize.js"></script> -->
