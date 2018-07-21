@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="karthikpadmanabhan.com" manifest="karthik.padmanabhan">
+
+<head>
+	<!-- BEGIN META TAGS -->
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="HJ8GCGVxps9YbEAgYcmRrrUWSP6Bm1iOHJLquiUQiVY" />
+	<!-- END META TAGS -->
+
+	<!-- BEGIN CSS STYLES -->
+	<link rel="stylesheet" type="text/css" href="../css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/theme.min.css">
+	<!-- END CSS STYLES -->
+
+	<!-- BEGIN JS -->
+	<script src="../js/jquery.min.js" />
+	<script src="../js/unorphanize.min.js" />
+	<!-- END JS -->
+
+	<!-- BEGIN GOOGLE ANALYTICS & GOOGLE GLOBAL SITE TAG MANAGER -->
+	<script async src="../js/googletagmanager.min.js" />
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-121488949-1');
+	</script>
+	<!-- END GOOGLE ANALYTICS & GOOGLE GLOBAL SITE TAG MANAGER -->
+
+	<!-- BEGIN WEBSITE TITLE, FAV ICONS & APP ICONS -->
+	<title>Android SQLite Viewer | Karthik Padmanabhan</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="../icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="../icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="../icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+	<link rel="manifest" href="../icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#171920">
+	<meta name="msapplication-TileImage" content="../icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#171920">
+	<!-- END WEBSITE TITLE, FAV ICONS & APP ICONS -->
+</head>
+
+<body data-gr-c-s-loaded="true">
+	<div class="container">
+		<!-- BEGIN HEADER & NAV BAR -->
+		<p class="caps left">
+			Karthik&nbsp;Padmanabhan - Blog / Good Reads
+		</p>
+
+		<p class="caps right">
+			<a href="../">Return to homepage</a>
+		</p>
+		<div style="clear: both;"></div>
+		<hr/>
+		<!-- END HEADER & NAV BAR -->
+		<!-- BEGIN PAGE CONTENT -->
+
+		<div class="article">
+			<div class="header">
+				<p class="caps">Simple Android SQLite Viewer</p>
+			</div>
+
+			<div class="content">
+				SQLite is an integrated database solution for Android Applications. But, working with them might be difficult. Even more difficult is debugging and checking if the desired data is inserted or updated correctly.
+				<br/><br/>
+				There are several solutions available to view the Data from the Database files. But, almost all of them are complex. That’s when I stumbled upon this really simple solution.
+				<br/><br/>
+				Just add the following code to your <i style="color:aqua">build.gradle</i> file and run your app in debug mode. Then you can point your browser to the <i style="color: aqua">"ip-address-of-the-device":8080</i> to view and edit your SQLite databases.				
+				<div style="clear: both;"></div>
+				<div class="code">
+					<link lang = "java" rel="stylesheet" type="text/css" href="../css/one-dark.min.css">
+					<script src="https://gist.github.com/karlogin/747e6c784d9240523f9136eccc868848.js"></script>
+				</div>
+				<img src="./images/Android-SQLite-Viewer/Screen Shot 2018-07-18 at 6.25.54 PM.png" alt="Screenshot of Android SQLite Viewer" /> 
+			</div>
+
+			<div class="footer caps">
+				<div style="clear: both;"></div>
+				<hr/> share this post with others on:
+				<a id="twitter_share" href="" class="brand-tw">Twitter</a>
+				|
+				<a id="facebook_share" href="" class="brand-fb">Facebook</a>
+				<script>
+					var url_page = window.location.href;
+					console.log(url_page);
+					document.getElementById("facebook_share").href = "http://www.facebook.com/share.php?u=" + url_page;
+					document.getElementById("twitter_share").href = "https://twitter.com/share?ref_src=" + url_page;
+				</script>
+			</div>
+		</div>
+		<!-- END PAGE CONTENT -->
+
+		<!-- BEGIN FOOTER -->
+		<div style="clear: both;"></div>
+		<hr/>
+		<p class="caps">
+			<i>© 2018 - Karthik Padmanabhan. All Rights Reserved.</i>
+		</p>
+		<!-- END PAGE FOOTER -->
+
+	</div>
+
+	<!-- BEGIN UNORPHANIZE -->
+	<script>
+		$("p").unorphanize();
+	</script>
+	<!-- END UNORPHANIZE -->
+</body>
+
+</html>
