@@ -14,6 +14,7 @@
 	--linkedin: #228fcb;
 	--university: #dd080f;
 	--development: #b62fce;
+	--silverbackgames: #c0c0c0;
 }
 
 html,
@@ -125,4 +126,12 @@ a.brand-rd {
 
 a.brand-rd:hover {
 	border-bottom-color: var(--development);
+}
+
+a.brand-sbg {
+	color: var(--silverbackgames);
+}
+
+a.brand-sbg:hover {
+	border-bottom-color: var(--silverbackgames);
 }
