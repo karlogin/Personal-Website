@@ -1,5 +1,5 @@
 :root {
-	--background-color: #171920;
+	--background-color: #000000;
 	--text-font-color: #d7dddf;
 	--list-font-color: #82959b;
 	--link-color: #82959b;
@@ -16,6 +16,7 @@
 	--development: #b62fce;
 	--silverbackgames: #c0c0c0;
 }
+/*171920*/
 
 html,
 body,
