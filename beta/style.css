@@ -121,20 +121,21 @@ a:hover {
 }
 
 .container-main {
-  padding: 25px 120px;
-  margin: 25px 100px;
+  padding: 25px 50px;
+  padding-bottom: 0px;
+  margin: 25px 50px;
 }
 
 .container-header {
-  padding: 120px;
-        padding-bottom: 50px;
-  margin: 25px 100px;
+  padding: 50px;
+  padding-bottom: 25px;
+  margin: 25px 50px;
 }
 
 .container-footer {
-  padding: 120px;
-    padding-top: 25px;
-  margin: 25px 100px;
+  padding: 50px;
+  padding-top: 10px;
+  margin: 25px 50px;
 }
 
 hr {
@@ -226,7 +227,7 @@ a.svg-icon:hover {
 
 .social-icons {
     margin: auto;
-    width: 160px;
+    width: 120px;
 }
 
 
