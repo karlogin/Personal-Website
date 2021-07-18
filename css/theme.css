@@ -1,8 +1,8 @@
 :root {
-	--background-color: #000000;
-	--text-font-color: #d7dddf;
-	--list-font-color: #82959b;
-	--link-color: #82959b;
+	--background-color: rgb(10, 25, 47);
+	--text-font-color: rgb(204, 214, 246);
+	--list-font-color: rgb(100, 255, 218);
+	--link-color: rgb(136, 146, 176);
 	--facebook: #3B5998;
 	--wikipedia: #eaecf0;
 	--nextwave: #F7A100;
@@ -14,7 +14,7 @@
 	--linkedin: #228fcb;
 	--university: #dd080f;
 	--development: #b62fce;
-	--silverbackgames: #c0c0c0;
+	--silverbackgames: cyan;
 }
 /*171920*/
 
@@ -32,6 +32,24 @@ body {
 ul {
 	color: var(--list-font-color);
 }
+
+.navbarlinks {
+    	color: var(--list-font-color);
+}
+
+.svg-icons {
+    
+	color: var(--list-font-color);
+}
+
+a.svg-icon {
+   color: var(--list-font-color); 
+}
+
+a.svg-icon:hover {
+	color: var(--link-color);
+}
+
 
 a {
 	color: var(--link-color);
