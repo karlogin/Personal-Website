@@ -1,0 +1,156 @@
+:root {
+    --background-color: rgb(10, 25, 47);
+    --text-font-color: rgb(204, 214, 246);
+    --list-font-color: rgb(100, 255, 218);
+    --link-color: rgb(136, 146, 176);
+    --facebook: #3B5998;
+    --wikipedia: #eaecf0;
+    --nextwave: #F7A100;
+    --youtube: #ff0000;
+    --android: #A4C639;
+    --ios: #5fc9f8;
+    --resume: #00bcd4;
+    --twitter: #2aa3ef;
+    --linkedin: #228fcb;
+    --university: #dd080f;
+    --development: #b62fce;
+    --silverbackgames: cyan;
+}
+
+
+/*171920*/
+
+html,
+body,
+ul a,
+ul p {
+    color: var(--text-font-color);
+}
+
+body {
+    background: var(--background-color);
+}
+
+ul {
+    color: var(--list-font-color);
+}
+
+.navbarlinks {
+    color: var(--list-font-color);
+}
+
+.svg-icons {
+    color: var(--list-font-color);
+}
+
+a.svg-icon {
+    color: var(--list-font-color);
+}
+
+a.svg-icon:hover {
+    color: var(--link-color);
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    border-color: var(--link-color);
+}
+
+a.brand-fb {
+    color: var(--facebook);
+}
+
+a.brand-fb:hover {
+    border-bottom-color: var(--facebook);
+}
+
+a.brand-wk {
+    color: var(--wikipedia);
+}
+
+a.brand-wk:hover {
+    border-bottom-color: var(--wikipedia)
+}
+
+a.brand-nw {
+    color: var(--nextwave);
+}
+
+a.brand-nw:hover {
+    border-bottom-color: var(--nextwave);
+}
+
+a.brand-yt {
+    color: var(--youtube);
+}
+
+a.brand-yt:hover {
+    border-bottom-color: var(--youtube);
+}
+
+a.brand-ad {
+    color: var(--android);
+}
+
+a.brand-ad:hover {
+    border-bottom-color: var(--android);
+}
+
+a.brand-io {
+    color: var(--ios);
+}
+
+a.brand-io:hover {
+    border-bottom-color: var(--ios);
+}
+
+a.brand-ra {
+    color: var(--resume);
+}
+
+a.brand-ra:hover {
+    border-bottom-color: var(--ios);
+}
+
+a.brand-tw {
+    color: var(--twitter);
+}
+
+a.brand-tw:hover {
+    border-bottom-color: var(--twitter);
+}
+
+a.brand-li {
+    color: var(--linkedin);
+}
+
+a.brand-li:hover {
+    border-bottom-color: var(--linkedin);
+}
+
+a.brand-fw {
+    color: var(--university);
+}
+
+a.brand-fw:hover {
+    border-bottom-color: var(--university);
+}
+
+a.brand-rd {
+    color: var(--development);
+}
+
+a.brand-rd:hover {
+    border-bottom-color: var(--development);
+}
+
+a.brand-sbg {
+    color: var(--silverbackgames);
+}
+
+a.brand-sbg:hover {
+    border-bottom-color: var(--silverbackgames);
+}
