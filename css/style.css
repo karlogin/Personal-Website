@@ -249,3 +249,37 @@ a.svg-icon:hover {
     padding: 40px;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .container-main {
+    padding: 15px;
+    margin: 15px;
+  }
+  
+  .container-header {
+    padding: 25px;
+    margin: 15px;
+  }
+  
+  .container-footer {
+    padding: 25px;
+    margin: 15px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container-main {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .container-header {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .container-footer {
+    padding: 15px;
+    margin: 10px;
+  }
+}
