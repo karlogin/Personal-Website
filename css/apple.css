@@ -882,3 +882,48 @@ body {
     .ap-nav-inner { padding: 0 20px; }
     .ap-bio { font-size: 18px; }
 }
+
+/* ── Company favicons ──────────────────────────────────────────── */
+.ap-favicon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 6px;
+    border-radius: 3px;
+    object-fit: contain;
+    position: relative;
+    top: -1px;
+}
+
+.ap-bio a .ap-favicon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    top: -1px;
+}
+
+/* ── Hero scroll arrow ─────────────────────────────────────────── */
+.ap-hero-scroll {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    color: rgba(255,255,255,0.5);
+    transition: opacity 0.4s ease, color 0.2s ease;
+    animation: scroll-bounce 2.4s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+.ap-hero-scroll:hover { color: rgba(255,255,255,0.9); }
+.ap-hero-scroll.hidden { opacity: 0 !important; transition: opacity 0.3s ease; }
+
+@keyframes scroll-bounce {
+    0%   { opacity: 0;   transform: translateX(-50%) translateY(0); }
+    15%  { opacity: 1; }
+    50%  { opacity: 1;   transform: translateX(-50%) translateY(6px); }
+    85%  { opacity: 1; }
+    100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
+}
