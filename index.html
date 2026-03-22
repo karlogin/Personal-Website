@@ -10,6 +10,12 @@
         <meta name="google-site-verification" content="HJ8GCGVxps9YbEAgYcmRrrUWSP6Bm1iOHJLquiUQiVY" />
         <!-- END META TAGS -->
 
+        <!-- BEGIN GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+        <!-- END GOOGLE FONTS -->
+
         <!-- BEGIN CSS STYLES -->
         <link rel="stylesheet" type="text/css" href="css/style.min.css">
         <link rel="stylesheet" type="text/css" href="css/theme.min.css">
@@ -54,6 +60,10 @@
         <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
         <!-- END WEBSITE TITLE, FAV ICONS & APP ICONS -->
 
+        <!-- BEGIN THEME INIT (prevent flash of wrong theme) -->
+        <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+        <!-- END THEME INIT -->
+
     </head>
 
 <body>
@@ -74,6 +84,13 @@
             <div class="caps right navbarlinks">
                 <!--01. <a class="caps nav" href="https://medium.com/@karlog">Blog</a> --> <!--01.--> <a class="caps nav" href="https://github.com/karlogin">Github</a> <!-- 03. <a class="caps nav" href="https://www.flickr.com/photos/kar_log/">Shot by Me</a> -->
                 <!--02.--> <a class="caps nav" href="https://drive.google.com/file/d/1Q9FaFPHVd3dUcfpUmq3-aTCd75oY1sp1/view?usp=drive_link">Resume'</a>
+<span class="theme-switcher">
+                    <button class="theme-swatch" data-theme="navy"      style="background:#64ffda" title="Navy"></button>
+                    <button class="theme-swatch" data-theme="terminal"  style="background:#b4ffb4" title="Terminal"></button>
+                    <button class="theme-swatch" data-theme="warm"      style="background:#ffb43c" title="Warm"></button>
+                    <button class="theme-swatch" data-theme="light"     style="background:#1464c8" title="Light"></button>
+                    <button class="theme-swatch" data-theme="synthwave" style="background:#ff50c8" title="Synthwave"></button>
+                </span>
             </div>
             <!-- NAVIGATION -->
 
@@ -356,6 +373,25 @@ Development), Jira, Confluence, Miro Collaboration Platform
         $("p").unorphanize();
     </script>
     <!-- END UNORPHANIZE -->
+
+<!-- BEGIN THEME SWITCHER -->
+    <script>
+        (function () {
+            var swatches = document.querySelectorAll('.theme-swatch');
+            var current = document.documentElement.getAttribute('data-theme') || 'navy';
+            swatches.forEach(function (s) {
+                if (s.getAttribute('data-theme') === current) s.classList.add('active');
+                s.addEventListener('click', function () {
+                    var theme = this.getAttribute('data-theme');
+                    document.documentElement.setAttribute('data-theme', theme);
+                    localStorage.setItem('theme', theme);
+                    swatches.forEach(function (b) { b.classList.remove('active'); });
+                    this.classList.add('active');
+                });
+            });
+        })();
+    </script>
+    <!-- END THEME SWITCHER -->
 
 </footer>
 
