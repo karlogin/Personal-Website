@@ -1,392 +1,371 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-        <!-- BEGIN META TAGS -->
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="google-site-verification" content="HJ8GCGVxps9YbEAgYcmRrrUWSP6Bm1iOHJLquiUQiVY" />
-        <!-- END META TAGS -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="HJ8GCGVxps9YbEAgYcmRrrUWSP6Bm1iOHJLquiUQiVY" />
 
-        <!-- BEGIN GOOGLE FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
-        <!-- END GOOGLE FONTS -->
+    <link rel="stylesheet" type="text/css" href="css/apple.css">
 
-        <!-- BEGIN CSS STYLES -->
-        <link rel="stylesheet" type="text/css" href="css/style.min.css">
-        <link rel="stylesheet" type="text/css" href="css/theme.min.css">
-        <!-- END CSS STYLES -->
+    <!-- BEGIN GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV5T4XKX3P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FV5T4XKX3P');
+    </script>
+    <!-- END GOOGLE ANALYTICS -->
 
-        <!-- BEGIN JS -->
-        <script src="./js/jquery.min.js"></script>
-        <script src="./js/unorphanize.min.js"></script>
-        <!-- END JS -->
-
-        <!-- BEGIN GOOGLE ANALYTICS & GOOGLE GLOBAL SITE TAG MANAGER -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV5T4XKX3P"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-FV5T4XKX3P');
-	</script>
-        <!-- END GOOGLE ANALYTICS & GOOGLE GLOBAL SITE TAG MANAGER -->
-
-        <!-- BEGIN WEBSITE TITLE, FAV ICONS & APP ICONS -->
-        <title>Karthik Padmanabhan | Get an Extra Life.</title>
-        <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#171920">
-        <meta name="msapplication-TileImage" content="./icons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#171920">
-        <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
-        <!-- END WEBSITE TITLE, FAV ICONS & APP ICONS -->
-
-        <!-- BEGIN THEME INIT (prevent flash of wrong theme) -->
-        <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
-        <!-- END THEME INIT -->
-
-    </head>
+    <title>Karthik Padmanabhan | Get an Extra Life.</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+</head>
 
 <body>
 
-<header>
-
-    <div class="container-header" data-gr-c-s-loaded="true">
-
-        <div class="navigation">
-
-            <!-- TITLE -->
-            <div class="caps left navbarlinks">
-                Karthik Padmanabhan
-            </div>
-            <!-- TITLE -->
-
-            <!-- NAVIGATION -->
-            <div class="caps right navbarlinks">
-                <!--01. <a class="caps nav" href="https://medium.com/@karlog">Blog</a> --> <!--01.--> <a class="caps nav" href="https://github.com/karlogin">Github</a> <!-- 03. <a class="caps nav" href="https://www.flickr.com/photos/kar_log/">Shot by Me</a> -->
-                <!--02.--> <a class="caps nav" href="https://drive.google.com/file/d/1Q9FaFPHVd3dUcfpUmq3-aTCd75oY1sp1/view?usp=drive_link">Resume'</a>
-<span class="theme-switcher">
-                    <button class="theme-swatch" data-theme="navy"      style="background:#64ffda" title="Navy"></button>
-                    <button class="theme-swatch" data-theme="terminal"  style="background:#b4ffb4" title="Terminal"></button>
-                    <button class="theme-swatch" data-theme="warm"      style="background:#ffb43c" title="Warm"></button>
-                    <button class="theme-swatch" data-theme="light"     style="background:#1464c8" title="Light"></button>
-                    <button class="theme-swatch" data-theme="synthwave" style="background:#ff50c8" title="Synthwave"></button>
-                </span>
-            </div>
-            <!-- NAVIGATION -->
-
+<!-- ── Nav ──────────────────────────────────────────────────── -->
+<nav class="ap-nav" id="ap-nav">
+    <div class="ap-nav-inner">
+        <a href="#" class="ap-nav-name">Karthik Padmanabhan</a>
+        <div class="ap-nav-links">
+            <a href="https://github.com/karlogin" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/karthik-padmanabhan/" target="_blank">LinkedIn</a>
+            <a href="https://drive.google.com/file/d/1Q9FaFPHVd3dUcfpUmq3-aTCd75oY1sp1/view?usp=drive_link" target="_blank">Résumé</a>
         </div>
-
     </div>
+</nav>
 
-</header>
-
-<main>
-
-    <div class="container-main">
-        <p style="text-align: justify">I'm a Passionate <b>Game Designer/Developer</b> currently exploring new horizons in the gaming industry. With a recent tenure as Lead Game Developer at <a href="http://gameloft.com" class="brand-sbg">Gameloft</a>, I bring a wealth of experience and expertise to the table, particularly in leading successful game development teams. Now, as I embark on the next chapter of my journey, I'm eagerly seeking fresh opportunities to apply my skills and creativity. Previously, I held the role of Lead Technical Developer at <a href="http://silverbackvr.com" class="brand-sbg">Silverback Games</a>, where I led successful projects and contributed to the company's growth. </br>
-        </br>
-            I hold a master's degree in Mathematical Computing & Data Analytics from <a href="http://smu.ca" class="brand-fw">Saint Mary's University</a>, Halifax, Canada, where I acquired a solid foundation in advanced computational techniques.</br>
-            </br>
-            My goal is to lead successful game development teams and contribute to the creation of exceptional gaming experiences. Proficient in both <a href="https://unity3d.com/" class="brand-ra">Unity3D Engine</a> and
-            <a href="https://www.unrealengine.com/" class="brand-rd">Unreal Engine</a>, I'm committed to pushing the boundaries of innovation.
-        </p>
-
-        <div style="clear: both;"></div>
-        <hr />
-        <p style="text-align: justify">
-            Check out
-            <a href="https://drive.google.com/file/d/1Q9FaFPHVd3dUcfpUmq3-aTCd75oY1sp1/view?usp=drive_link" class="brand-ra">my resumé</a>. Connect with me and contact me via
-            <a href="https://linkedin.com/in/karthik-padmanabhan/" class="brand-li">LinkedIn</a> if you think I might be helpful for your Professional Work. Or you could just follow me on
-            <a href="https://twitter.com/kar_log" class="brand-tw">Twitter</a>. If you would like to discuss any interesting projects/games,
-            <a href="mailto:karthik.padmanabhan@outlook.in">let’s&nbsp;talk</a>.
-        </p>
-
-        <div style="clear: both;"></div>
-        <hr />
-        <p class="caps">
-            Technical Skills
-        </p>
-        <p style="text-align: justify">
-            Unity 3D, C#, Gameplay Programming, Game Design, UI Programming, Tools Programming, Server
-Interactions, Multiplayer Framework, Debugging Code, Procedural Programming, Threading & Performance Optimization,
-Native .Net Development, Python (Programming Language), Computer Networking, Asset Bundle Creation and Management, UI Programming (Nova UI, NGUI, UGUI & EzGUI), Integrating Third-Party Libraries and Ad Networks, Bluetooth Multiplayer, A* Path Finding Algorithm, Runtime UV mapping using Custom Atlas Builder, Seed based World-map Saving and Loading with GZip Compression, Machine Learning, AI, NLP
-        </p>
-        <div style="clear: both;"></div>
-        <hr />
-        <p class="caps">
-            Development Tools & Platforms
-        </p>
-        <p style="text-align: justify">
-            Console Development (Xbox/PlayStation/Nintendo SDK Integration), Apple Arcade
-Development, Netflix Game Development, VR Development (Oculus VR – PC & Mobile), Jenkins (CI/CD), Git (including Git
-master and Gitlab)
-        </p>
-        <div style="clear: both;"></div>
-        <hr />
-        <p class="caps">
-            Team & Project Management
-        </p>
-        <p style="text-align: justify">
-            Lead Development Teams, Team Leadership, Requirement Analysis, R&D (Research and
-Development), Jira, Confluence, Miro Collaboration Platform
-        </p>
-
-
-        <div style="clear: both;"></div>
-        <hr />
-        <p class="caps">
-            Projects that I have worked on
-        </p>
-        <ul class="projects-grid">
-            <li>
-                <span class="project-company">
-                    <p class="caps" style="color: #82959b;">For <b>Gameloft</b></p>
-                </span>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/songpop.jpg" alt="SongPop Party">
-                <div class="project-overlay">
-                    <p>Development Lead; Live Events; Discovery; Console SDK Integration; Ci/CD; Publishing; Task Management; Performance Optimization</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>SongPop Party</b> --
-                    <a href="https://songpopparty.com/" class="brand-nw" target="_blank">Details</a> |
-                    <a href="https://gmlft.co/SongPopParty-NintendoSwitch" class="brand-yt" target="_blank">Nintendo</a> |
-                    <a href="https://gmlft.co/SongPopParty-XboxLaunch" class="brand-ad" target="_blank">Xbox</a> |
-                    <a href="https://apple.co/-SongPopParty" class="brand-io" target="_blank">Apple Arcade</a>
-                </div>
-            </li>
-
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/ddv.jpg" alt="Disney Dreamlight Valley">
-                <div class="project-overlay">
-                    <p>Built testing systems to validate player profile data integrity before live update releases</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>Disney Dreamlight Valley</b> --
-                    <a href="https://disneydreamlightvalley.com/" class="brand-nw" target="_blank">Details</a> |
-                    <a href="https://store.steampowered.com/app/1401590/Disney_Dreamlight_Valley/" class="brand-ra" target="_blank">Steam</a> |
-                    <a href="https://www.nintendo.com/store/products/disney-dreamlight-valley-switch/" class="brand-yt" target="_blank">Nintendo</a> |
-                    <a href="https://www.xbox.com/en-US/games/store/disney-dreamlight-valley/9P5LF3PL8FGD" class="brand-ad" target="_blank">Xbox</a>
-                </div>
-            </li>
-
-            <li>
-                <span class="project-company">
-                    <p class="caps" style="color: #82959b;">For <b>Nextwave Multimedia Pvt. Ltd.</b></p>
-                </span>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/wcc1.jpg" alt="World Cricket Championship 1">
-                <div class="project-overlay">
-                    <p>UI Programming; Scripting; Windows UWP Porting; In-Game Chat</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>World Cricket Championship 1</b> --
-                    <a href="http://nextwavemultimedia.com/html/wcc-cricket.html" class="brand-nw" target="_blank">Details</a> |
-                    <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3ElniJb-aUYI_07R2mWMa56" class="brand-yt" target="_blank">Youtube</a> |
-                    <a href="https://market.android.com/details?id=com.nextwave.wcc_pr" class="brand-ad" target="_blank">Android</a> |
-                    <a href="https://itunes.apple.com/in/app/world-cricket-championship/id434810900?mt=8" class="brand-io" target="_blank">iOS</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/wcc2_banner.jpg" alt="World Cricket Championship 2">
-                <div class="project-overlay">
-                    <p>Involved in Game Plan; Game Design; Asset Bundles; Technical Documentation; UI Programming; UX Design; Multilingual Commentary Integration; Server Interactions; Monetization; Ad Mediation Network Integration; Scripting; Windows UWP Porting</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>World Cricket Championship 2</b> --
-                    <a href="http://nextwavemultimedia.com/html/world-cricket-championship-2.html" class="brand-nw" target="_blank">Details</a> |
-                    <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3Eb4neSx3qqNaIgD7PQ9rJS" class="brand-yt" target="_blank">Youtube</a> |
-                    <a href="https://play.google.com/store/apps/details?id=com.nextwave.wcc2" class="brand-ad" target="_blank">Android</a> |
-                    <a href="https://itunes.apple.com/app/world-cricket-championship-2/id1025281689" class="brand-io" target="_blank">iOS</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/batattack.jpg" alt="Bat Attack Cricket">
-                <div class="project-overlay">
-                    <p>Game Design; Node.Js – Socket based Multiplayer Implementation in Unity; UI Programming; Monetization; Ad Network Implementation; Server Interactions for User data storage; Android, iOS, Windows UWP Porting</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>Bat Attack Cricket</b> --
-                    <a href="http://nextwavemultimedia.com/html/batattackcricket.html" class="brand-nw" target="_blank">Details</a> |
-                    <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3E4kXxRI5H5uEM-Y5tmaNdm" class="brand-yt" target="_blank">Youtube</a> |
-                    <a href="https://play.google.com/store/apps/details?id=com.nextwave.batattackcricket&hl=en" class="brand-ad" target="_blank">Android</a> |
-                    <a href="https://itunes.apple.com/us/app/bat-attack-cricket/id1068431904?ls=1&mt=8" class="brand-io" target="_blank">iOS</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/realcarrom.jpg" alt="Real Carrom">
-                <div class="project-overlay">
-                    <p>Worked on different Game Mode Design; Helped in improving Monetization</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>Real Carrom</b> --
-                    <a href="http://nextwavemultimedia.com/html/real-carrom.html" class="brand-nw" target="_blank">Details</a> |
-                    <a href="https://gaming.youtube.com/game/UCK-MRkuVB-QqgmVrTeRHpzQ" class="brand-yt" target="_blank">Youtube</a> |
-                    <a href="https://play.google.com/store/apps/details?id=com.nextwave.realcarrom" class="brand-ad" target="_blank">Android</a> |
-                    <a href="https://itunes.apple.com/us/app/real-carrom/id1105859833?ls=1&mt=8" class="brand-io" target="_blank">iOS</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/fastestfinger.jpg" alt="Fastest Finger Football">
-                <div class="project-overlay">
-                    <p>Bluetooth Multiplayer using WinRT; UI Programming</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>Fastest Finger Football</b> --
-                    <a href="http://nextwavemultimedia.com/blog/3d-animation/fastest-finger-football-now-in-wp8-store/" class="brand-nw" target="_blank">Details</a> |
-                    <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3GOzQSTJiA8BL-hejmVhG0T" class="brand-yt" target="_blank">Youtube</a> |
-                    <a href="https://www.microsoft.com/en-ca/p/fastest-finger-football/9wzdncrdn214?rtc=1" class="brand-li" target="_blank">Windows Store</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/wttc.jpg" alt="World Table Tennis Championship">
-                <div class="project-overlay">
-                    <p>Worked on UI Design; Game Design; different Game Mode Design; Monetization</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>World Table Tennis Championship</b> --
-                    <a href="https://youtu.be/2P_TjALVZAg" class="brand-yt" target="_blank">Youtube</a> |
-                    <a href="https://play.google.com/store/apps/details?id=com.nextwave.wttcpingpong" class="brand-ad" target="_blank">Android(Beta)</a>
-                </div>
-            </li>
-        </ul>
-        <div style="clear: both;"></div>
-        <ul class="projects-grid">
-            <li>
-                <span class="project-company">
-                    <p class="caps" style="color: #82959b;"><b>Other Work/Projects</b></p>
-                </span>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/ggj2020.jpg" alt="Global Game Jam 2020">
-                <div class="project-overlay">
-                    <p>Hot wheels game with track building in VR using Oculus Quest.</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>Global Game Jam 2020</b> -- Game: VR Hot Wheels
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/ggj2018.jpg" alt="Global Game Jam 2018">
-                <div class="project-overlay">
-                    <p>You are evil! You are villainous! And of course, a swaggie zombie. How about you go out there evading the trigger-happy cops and spread the love of virus. It's good to be bad.</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>Global Game Jam 2018</b> — Bite Me! --
-                    <a href="https://globalgamejam.org/2018/games/bite-me" class="brand-nw" target="_blank">Details</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/alc007.jpg" alt="ALC 007 Hackathon">
-                <div class="project-overlay">
-                    <p>We developed a new method type of Lottery. A Group Lottery where people can play as a group with their friends, family, co-workers, or a socially mutual group. The highlight was to create a easy to use Progressive Web Application so that it can be used by users of all mobile platforms. Since Google does not let apps that do gambling on their App Store.</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>ALC 007: Space Hack-a-thon 2018</b> --
-                    <a href="https://www.eventbrite.ca/e/atlantic-lottery-hackathon-007-space-lottery-tickets-47166437083#" class="brand-nw" target="_blank">Details</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/nsopendata.jpg" alt="NS Open Data Contest 2018">
-                <div class="project-overlay">
-                    <p>Performed analysis of various datasets by creating a data model which was then used to predict where the Government can invest to reduce Agricultural Loans and losses to Government due to Floods.</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>NS Open Data Contest 2018</b> --
-                    <a href="https://novascotia.ca/news/release/?id=20180305002" class="brand-nw" target="_blank">Details</a>
-                </div>
-            </li>
-            <li class="project-card">
-                <img class="project-hero" src="img/projects/retailhackathon.jpg" alt="Retail Hackathon 2018">
-                <div class="project-overlay">
-                    <p>Developed an algorithm and Dashboard for ALC where they can view Retail Orders and Evaluate the new orders to minimize returns and optimize cost incurred in distribution.</p>
-                </div>
-                <div class="project-card-footer">
-                    <b>Retail Hackathon 2018</b> --
-                    <a href="https://www.facebook.com/permalink.php?story_fbid=2007478512604306&id=1628226460529515" class="brand-nw" target="_blank">Details</a>
-                </div>
-            </li>
-        </ul>
-
-
-
+<!-- ── Hero ─────────────────────────────────────────────────── -->
+<section class="ap-hero">
+    <div class="ap-hero-inner">
+        <span class="ap-eyebrow ap-reveal">Game Designer &amp; Developer</span>
+        <h1 class="ap-reveal ap-reveal-delay-1">Karthik<br>Padmanabhan.</h1>
+        <p class="ap-hero-sub ap-reveal ap-reveal-delay-2">Lead Game Developer. Unity. Unreal.<br>Console. Mobile. Apple Arcade.</p>
+        <div class="ap-hero-ctas ap-reveal ap-reveal-delay-3">
+            <a href="mailto:me@karthikpadmanabhan.com" class="ap-btn">Get in touch</a>
+            <a href="https://drive.google.com/file/d/1Q9FaFPHVd3dUcfpUmq3-aTCd75oY1sp1/view?usp=drive_link" target="_blank" class="ap-btn ap-btn-ghost">View résumé</a>
+        </div>
     </div>
+</section>
 
-</main>
+<!-- ── About ─────────────────────────────────────────────────── -->
+<section class="ap-section">
+    <div class="ap-section-inner">
+        <div class="ap-section-header ap-reveal">
+            <span class="ap-eyebrow">Background</span>
+            <h2 class="ap-section-title">About.</h2>
+        </div>
+        <div class="ap-about-grid">
+            <div class="ap-bio ap-reveal ap-reveal-delay-1">
+                <p>I'm a passionate <strong>Game Designer and Developer</strong> with a wealth of experience leading successful game development teams. With a recent tenure as Lead Game Developer at <a href="http://gameloft.com">Gameloft</a>, I bring deep expertise in shipping titles across console, mobile, and subscription platforms.</p>
+                <p>Previously, I held the role of Lead Technical Developer at <a href="http://silverbackvr.com">Silverback Games</a>, where I led successful projects and contributed to the company's growth. I hold a master's degree in Mathematical Computing &amp; Data Analytics from <a href="http://smu.ca">Saint Mary's University</a>, Halifax, Canada.</p>
+                <p>My goal is to lead exceptional game development teams and push the boundaries of what games can be. Proficient in both <a href="https://unity3d.com/">Unity3D</a> and <a href="https://www.unrealengine.com/">Unreal Engine</a>.</p>
+            </div>
+            <div class="ap-skills ap-reveal ap-reveal-delay-2">
+                <div class="ap-skills-group">
+                    <span class="ap-skills-label">Technical Skills</span>
+                    <p class="ap-skills-text">Unity 3D · C# · Gameplay Programming · Game Design · UI Programming · Tools Programming · Server Interactions · Multiplayer Framework · Performance Optimization · Native .Net · Python · Machine Learning · AI · NLP</p>
+                </div>
+                <div class="ap-skills-group">
+                    <span class="ap-skills-label">Platforms &amp; Tools</span>
+                    <p class="ap-skills-text">Console (Xbox · PlayStation · Nintendo) · Apple Arcade · Netflix Games · VR (Oculus) · Jenkins · Git · Jira · Confluence</p>
+                </div>
+                <div class="ap-skills-group">
+                    <span class="ap-skills-label">Leadership</span>
+                    <p class="ap-skills-text">Lead Development Teams · Requirement Analysis · R&amp;D · Miro · Agile</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<footer>
+<!-- ── Gameloft Projects ──────────────────────────────────────── -->
+<section class="ap-section ap-section-dark">
+    <div class="ap-section-inner">
+        <div class="ap-section-header ap-reveal">
+            <span class="ap-eyebrow">Gameloft</span>
+            <h2 class="ap-section-title">Games.</h2>
+        </div>
+        <div class="ap-cards">
+            <div class="ap-card ap-reveal ap-reveal-delay-1">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/songpop.jpg" alt="SongPop Party">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">SongPop Party</h3>
+                    <p class="ap-card-desc">Development Lead; Live Events; Discovery; Console SDK Integration; CI/CD; Publishing; Task Management; Performance Optimization</p>
+                    <div class="ap-card-links">
+                        <a href="https://songpopparty.com/" class="ap-card-link" target="_blank">Details</a>
+                        <a href="https://gmlft.co/SongPopParty-NintendoSwitch" class="ap-card-link" target="_blank">Nintendo</a>
+                        <a href="https://gmlft.co/SongPopParty-XboxLaunch" class="ap-card-link" target="_blank">Xbox</a>
+                        <a href="https://apple.co/-SongPopParty" class="ap-card-link" target="_blank">Apple Arcade</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-2">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/ddv.jpg" alt="Disney Dreamlight Valley">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">Disney Dreamlight Valley</h3>
+                    <p class="ap-card-desc">Built testing systems to validate player profile data integrity before live update releases</p>
+                    <div class="ap-card-links">
+                        <a href="https://disneydreamlightvalley.com/" class="ap-card-link" target="_blank">Details</a>
+                        <a href="https://store.steampowered.com/app/1401590/Disney_Dreamlight_Valley/" class="ap-card-link" target="_blank">Steam</a>
+                        <a href="https://www.nintendo.com/store/products/disney-dreamlight-valley-switch/" class="ap-card-link" target="_blank">Nintendo</a>
+                        <a href="https://www.xbox.com/en-US/games/store/disney-dreamlight-valley/9P5LF3PL8FGD" class="ap-card-link" target="_blank">Xbox</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <div class="container-footer navbarlinks caps">
-        <div class="social-icons">
+<!-- ── Nextwave Projects ──────────────────────────────────────── -->
+<section class="ap-section ap-section-gray">
+    <div class="ap-section-inner">
+        <div class="ap-section-header ap-reveal">
+            <span class="ap-eyebrow" style="color:#555;">Nextwave Multimedia</span>
+            <h2 class="ap-section-title">More Games.</h2>
+        </div>
+        <div class="ap-cards ap-cards-light">
+            <div class="ap-card ap-reveal ap-reveal-delay-1">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/wcc1.jpg" alt="World Cricket Championship 1">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">World Cricket Championship 1</h3>
+                    <p class="ap-card-desc">UI Programming; Scripting; Windows UWP Porting; In-Game Chat</p>
+                    <div class="ap-card-links">
+                        <a href="http://nextwavemultimedia.com/html/wcc-cricket.html" class="ap-card-link" target="_blank">Details</a>
+                        <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3ElniJb-aUYI_07R2mWMa56" class="ap-card-link" target="_blank">YouTube</a>
+                        <a href="https://market.android.com/details?id=com.nextwave.wcc_pr" class="ap-card-link" target="_blank">Android</a>
+                        <a href="https://itunes.apple.com/in/app/world-cricket-championship/id434810900?mt=8" class="ap-card-link" target="_blank">iOS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-2">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/wcc2_banner.jpg" alt="World Cricket Championship 2">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">World Cricket Championship 2</h3>
+                    <p class="ap-card-desc">Game Plan; Game Design; Asset Bundles; Technical Documentation; UI Programming; UX Design; Multilingual Commentary; Server Interactions; Monetization; Ad Mediation; Windows UWP Porting</p>
+                    <div class="ap-card-links">
+                        <a href="http://nextwavemultimedia.com/html/world-cricket-championship-2.html" class="ap-card-link" target="_blank">Details</a>
+                        <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3Eb4neSx3qqNaIgD7PQ9rJS" class="ap-card-link" target="_blank">YouTube</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.nextwave.wcc2" class="ap-card-link" target="_blank">Android</a>
+                        <a href="https://itunes.apple.com/app/world-cricket-championship-2/id1025281689" class="ap-card-link" target="_blank">iOS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-1">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/batattack.jpg" alt="Bat Attack Cricket">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">Bat Attack Cricket</h3>
+                    <p class="ap-card-desc">Game Design; Node.js Socket-based Multiplayer in Unity; UI Programming; Monetization; Ad Network Implementation; Server Interactions; Android, iOS, Windows UWP Porting</p>
+                    <div class="ap-card-links">
+                        <a href="http://nextwavemultimedia.com/html/batattackcricket.html" class="ap-card-link" target="_blank">Details</a>
+                        <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3E4kXxRI5H5uEM-Y5tmaNdm" class="ap-card-link" target="_blank">YouTube</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.nextwave.batattackcricket&hl=en" class="ap-card-link" target="_blank">Android</a>
+                        <a href="https://itunes.apple.com/us/app/bat-attack-cricket/id1068431904?ls=1&mt=8" class="ap-card-link" target="_blank">iOS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-2">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/realcarrom.jpg" alt="Real Carrom">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">Real Carrom</h3>
+                    <p class="ap-card-desc">Game Mode Design; Monetization Improvements</p>
+                    <div class="ap-card-links">
+                        <a href="http://nextwavemultimedia.com/html/real-carrom.html" class="ap-card-link" target="_blank">Details</a>
+                        <a href="https://gaming.youtube.com/game/UCK-MRkuVB-QqgmVrTeRHpzQ" class="ap-card-link" target="_blank">YouTube</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.nextwave.realcarrom" class="ap-card-link" target="_blank">Android</a>
+                        <a href="https://itunes.apple.com/us/app/real-carrom/id1105859833?ls=1&mt=8" class="ap-card-link" target="_blank">iOS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-1">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/fastestfinger.jpg" alt="Fastest Finger Football">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">Fastest Finger Football</h3>
+                    <p class="ap-card-desc">Bluetooth Multiplayer using WinRT; UI Programming</p>
+                    <div class="ap-card-links">
+                        <a href="http://nextwavemultimedia.com/blog/3d-animation/fastest-finger-football-now-in-wp8-store/" class="ap-card-link" target="_blank">Details</a>
+                        <a href="https://www.youtube.com/playlist?list=PLRB3eCW9zU3GOzQSTJiA8BL-hejmVhG0T" class="ap-card-link" target="_blank">YouTube</a>
+                        <a href="https://www.microsoft.com/en-ca/p/fastest-finger-football/9wzdncrdn214?rtc=1" class="ap-card-link" target="_blank">Windows Store</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-2">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/wttc.jpg" alt="World Table Tennis Championship">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">World Table Tennis Championship</h3>
+                    <p class="ap-card-desc">UI Design; Game Design; Game Mode Design; Monetization</p>
+                    <div class="ap-card-links">
+                        <a href="https://youtu.be/2P_TjALVZAg" class="ap-card-link" target="_blank">YouTube</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.nextwave.wttcpingpong" class="ap-card-link" target="_blank">Android (Beta)</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <a href="https://twitter.com/kar_log" class="svg-icon">
-                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><title>X</title><path xmlns="http://www.w3.org/2000/svg" d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
-	        </svg>
+<!-- ── Side Projects ──────────────────────────────────────────── -->
+<section class="ap-section ap-section-dark">
+    <div class="ap-section-inner">
+        <div class="ap-section-header ap-reveal">
+            <span class="ap-eyebrow">Independent</span>
+            <h2 class="ap-section-title">Side Projects.</h2>
+        </div>
+        <div class="ap-cards">
+            <div class="ap-card ap-reveal ap-reveal-delay-1">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/ggj2020.jpg" alt="Global Game Jam 2020">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">Global Game Jam 2020 — VR Hot Wheels</h3>
+                    <p class="ap-card-desc">Hot wheels game with track building in VR using Oculus Quest.</p>
+                    <div class="ap-card-links"></div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-2">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/ggj2018.jpg" alt="Global Game Jam 2018">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">Global Game Jam 2018 — Bite Me!</h3>
+                    <p class="ap-card-desc">You are evil! You are villainous! And of course, a swaggie zombie. How about you go out there evading the trigger-happy cops and spread the love of virus. It's good to be bad.</p>
+                    <div class="ap-card-links">
+                        <a href="https://globalgamejam.org/2018/games/bite-me" class="ap-card-link" target="_blank">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-1">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/alc007.jpg" alt="ALC 007 Hackathon">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">ALC 007: Space Hack-a-thon 2018</h3>
+                    <p class="ap-card-desc">Developed a new Group Lottery where people can play together with friends, family, or co-workers. Built as a Progressive Web Application to support all mobile platforms.</p>
+                    <div class="ap-card-links">
+                        <a href="https://www.eventbrite.ca/e/atlantic-lottery-hackathon-007-space-lottery-tickets-47166437083#" class="ap-card-link" target="_blank">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-2">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/nsopendata.jpg" alt="NS Open Data Contest 2018">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">NS Open Data Contest 2018</h3>
+                    <p class="ap-card-desc">Performed analysis of various datasets by creating a data model which was then used to predict where the Government can invest to reduce Agricultural Loans and losses to Government due to Floods.</p>
+                    <div class="ap-card-links">
+                        <a href="https://novascotia.ca/news/release/?id=20180305002" class="ap-card-link" target="_blank">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ap-card ap-reveal ap-reveal-delay-1">
+                <div class="ap-card-img-wrap">
+                    <img class="ap-card-img" src="img/projects/retailhackathon.jpg" alt="Retail Hackathon 2018">
+                </div>
+                <div class="ap-card-body">
+                    <h3 class="ap-card-title">Retail Hackathon 2018</h3>
+                    <p class="ap-card-desc">Developed an algorithm and Dashboard for ALC where they can view Retail Orders and Evaluate the new orders to minimize returns and optimize cost incurred in distribution.</p>
+                    <div class="ap-card-links">
+                        <a href="https://www.facebook.com/permalink.php?story_fbid=2007478512604306&id=1628226460529515" class="ap-card-link" target="_blank">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────────────────── -->
+<section class="ap-contact ap-reveal">
+    <h2>Let's build something.</h2>
+    <p>Open to new opportunities. If you think I might be helpful for your work, let's talk.</p>
+    <div class="ap-contact-ctas">
+        <a href="mailto:me@karthikpadmanabhan.com" class="ap-btn">Get in touch</a>
+        <a href="https://linkedin.com/in/karthik-padmanabhan/" target="_blank" class="ap-btn ap-btn-ghost">LinkedIn</a>
+    </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer class="ap-footer">
+    <div class="ap-footer-inner">
+        <p>© 2026 Karthik Padmanabhan. All rights reserved.</p>
+        <div class="ap-social-icons">
+            <a href="https://twitter.com/kar_log" title="X / Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
             </a>
-
-            <a href="https://ca.linkedin.com/in/karthik-padmanabhan" class="svg-icon">
-                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><title>LinkedIn</title><path xmlns="http://www.w3.org/2000/svg" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-	        </svg>
+            <a href="https://ca.linkedin.com/in/karthik-padmanabhan" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
-
-            <a href="mailto:me@karthikpadmanabhan.com" class="svg-icon">
-                <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><title>Mail</title><path xmlns="http://www.w3.org/2000/svg" d="M5.564 2.703l3.45 3.734-2.434 4.798 5.14-.921 2.34 5.646L24 2.926 5.564 2.703zm-.636 8.088l.957-.787-1.234.39-.126-.18.51-.495-.669.27C1.813 10.979 0 13.455 0 16.35c0 1.951.822 3.705 2.133 4.947-.563-.99-.885-2.134-.885-3.355 0-2.865 1.809-5.415 4.315-6.42l.315-.766-.75.331-.211-.285.011-.011zm4.364-1.97L10.89 6l9.398-2.201L9.292 8.821z"/>
-	        </svg>
+            <a href="mailto:me@karthikpadmanabhan.com" title="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.564 2.703l3.45 3.734-2.434 4.798 5.14-.921 2.34 5.646L24 2.926 5.564 2.703zm-.636 8.088l.957-.787-1.234.39-.126-.18.51-.495-.669.27C1.813 10.979 0 13.455 0 16.35c0 1.951.822 3.705 2.133 4.947-.563-.99-.885-2.134-.885-3.355 0-2.865 1.809-5.415 4.315-6.42l.315-.766-.75.331-.211-.285.011-.011zm4.364-1.97L10.89 6l9.398-2.201L9.292 8.821z"/></svg>
             </a>
         </div>
-        <p class="footer">Designed & Built by Karthik Padmanabhan</p>
-        <p class="footer">© 2026. All rights reserved.</p>
     </div>
-
-    <!-- BEGIN UNORPHANIZE -->
-    <script>
-        $("p").unorphanize();
-    </script>
-    <!-- END UNORPHANIZE -->
-
-<!-- BEGIN THEME SWITCHER -->
-    <script>
-        (function () {
-            var swatches = document.querySelectorAll('.theme-swatch');
-            var current = document.documentElement.getAttribute('data-theme') || 'navy';
-            swatches.forEach(function (s) {
-                if (s.getAttribute('data-theme') === current) s.classList.add('active');
-                s.addEventListener('click', function () {
-                    var theme = this.getAttribute('data-theme');
-                    document.documentElement.setAttribute('data-theme', theme);
-                    localStorage.setItem('theme', theme);
-                    swatches.forEach(function (b) { b.classList.remove('active'); });
-                    this.classList.add('active');
-                });
-            });
-        })();
-    </script>
-    <!-- END THEME SWITCHER -->
-
 </footer>
 
-</body>
+<!-- ── JS: Nav scroll + Reveal animations ──────────────────────── -->
+<script>
+(function () {
+    // Nav light/dark on scroll
+    var nav = document.getElementById('ap-nav');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 60) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    }, { passive: true });
 
+    // Scroll reveal
+    var reveals = document.querySelectorAll('.ap-reveal');
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        reveals.forEach(function (el) { observer.observe(el); });
+    } else {
+        reveals.forEach(function (el) { el.classList.add('visible'); });
+    }
+})();
+</script>
+
+</body>
 </html>
