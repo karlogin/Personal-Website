@@ -104,6 +104,7 @@ body {
     padding: 0 40px;
 }
 
+/* hero eyebrow — small label */
 .ap-eyebrow {
     font-size: 12px;
     font-weight: 600;
@@ -112,6 +113,15 @@ body {
     color: #2997ff;
     margin-bottom: 24px;
     display: block;
+}
+
+/* section eyebrows act as titles — much larger */
+.ap-section .ap-eyebrow {
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 700;
+    text-transform: none;
+    letter-spacing: -0.025em;
+    margin-bottom: 40px;
 }
 
 .ap-hero h1 {
@@ -203,9 +213,9 @@ body {
     line-height: 1.05;
 }
 
-.ap-section .ap-eyebrow { color: #0071e3; }
-.ap-section-dark .ap-eyebrow { color: #2997ff; }
-.ap-section-dark .ap-section-title { color: #f5f5f7; }
+.ap-section .ap-eyebrow { color: #1d1d1f; }
+.ap-section-dark .ap-eyebrow { color: #f5f5f7; }
+.ap-section-gray .ap-eyebrow { color: #1d1d1f; }
 
 /* ── About / Bio ─────────────────────────────────────────── */
 .ap-about-grid {
@@ -450,58 +460,181 @@ body {
     fill: currentColor;
 }
 
-/* ── Experience Timeline ─────────────────────────────────── */
+/* ── Experience Timeline (horizontal) ───────────────────── */
 .ap-timeline {
     display: flex;
-    flex-direction: column;
+    position: relative;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* horizontal line aligned to dot centers: period(28px) + gap(6px) + half-dot(6px) = 40px */
+.ap-timeline::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0,0,0,0.12);
+    z-index: 0;
 }
 
 .ap-timeline-item {
-    display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 32px;
-    padding: 24px 0;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    align-items: baseline;
-}
-
-.ap-timeline-item:last-child {
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 148px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 8px;
 }
 
 .ap-timeline-period {
-    font-size: 13px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: #6e6e73;
-    letter-spacing: 0.01em;
-    padding-top: 2px;
-    white-space: nowrap;
+    line-height: 1.4;
+    height: 28px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 6px;
+}
+
+.ap-timeline-current .ap-timeline-period { color: #0071e3; }
+
+.ap-timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #c7c7cc;
+    border: 2.5px solid #f5f5f7;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 14px;
+}
+
+.ap-timeline-current .ap-timeline-dot {
+    background: #0071e3;
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 0 0 4px rgba(0,113,227,0.15);
 }
 
 .ap-timeline-company {
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
     color: #1d1d1f;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.01em;
     margin: 0 0 3px;
+    line-height: 1.25;
 }
 
+.ap-timeline-current .ap-timeline-company { color: #0071e3; }
+
 .ap-timeline-role {
-    font-size: 15px;
-    color: #1d1d1f;
+    font-size: 12px;
+    color: #3d3d3f;
     margin: 0 0 2px;
+    line-height: 1.4;
 }
 
 .ap-timeline-loc {
-    font-size: 13px;
-    color: #6e6e73;
+    font-size: 11px;
+    color: #aeaeb2;
     margin: 0;
 }
 
+/* ── Testimonials ────────────────────────────────────────── */
+.ap-testimonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.ap-testimonial {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.ap-testimonial-quote {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #3d3d3f;
+    flex: 1;
+    position: relative;
+    padding-top: 24px;
+}
+
+.ap-testimonial-quote::before {
+    content: '\201C';
+    position: absolute;
+    top: -8px;
+    left: -4px;
+    font-size: 56px;
+    line-height: 1;
+    color: #d1d1d6;
+    font-family: Georgia, serif;
+}
+
+.ap-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    padding-top: 16px;
+}
+
+.ap-testimonial-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1d1d1f;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ap-testimonial-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0 0 1px;
+}
+
+.ap-testimonial-title {
+    font-size: 11px;
+    color: #6e6e73;
+    margin: 0 0 1px;
+}
+
+.ap-testimonial-rel {
+    font-size: 11px;
+    color: #aeaeb2;
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .ap-testimonials { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 600px) {
-    .ap-timeline-item {
-        grid-template-columns: 1fr;
-        gap: 6px;
-    }
+    .ap-testimonials { grid-template-columns: 1fr; }
 }
 
 /* ── Scroll reveal ───────────────────────────────────────── */
