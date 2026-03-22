@@ -343,15 +343,20 @@ body {
 .ap-bio a:hover { text-decoration: underline; }
 
 .ap-skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px 48px;
+    columns: 2;
+    column-gap: 48px;
 }
 
 .ap-skills-group {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    break-inside: avoid;
+    margin-bottom: 32px;
+}
+
+.ap-skills-group:last-child {
+    margin-bottom: 0;
 }
 
 .ap-skills-label {
@@ -896,7 +901,7 @@ body {
     .ap-footer-inner { padding: 0 20px; }
     .ap-nav-inner { padding: 0 20px; }
     .ap-bio { font-size: 18px; }
-    .ap-skills { grid-template-columns: 1fr; }
+    .ap-skills { columns: 1; }
 }
 
 /* ── Company favicons ──────────────────────────────────────────── */
