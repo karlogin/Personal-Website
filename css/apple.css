@@ -384,16 +384,7 @@ body {
     white-space: nowrap;
 }
 
-a.ap-skill-tag {
-    color: #0071e3;
-    background: rgba(0,113,227,0.06);
-    border-color: rgba(0,113,227,0.15);
-}
 
-a.ap-skill-tag:hover {
-    background: rgba(0,113,227,0.12);
-    border-color: rgba(0,113,227,0.3);
-}
 
 /* ── Project Groups ──────────────────────────────────────── */
 .ap-project-group {
