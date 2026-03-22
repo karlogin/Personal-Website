@@ -1,0 +1,23 @@
+name: Deploy Beta Preview
+
+on:
+  push:
+    branches: [apple-design]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to /beta on gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          destination_dir: beta
+          keep_files: true
+          exclude_assets: '.github,local,*.html.bak'
