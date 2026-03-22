@@ -92,16 +92,49 @@ body {
     min-height: 100vh;
     background: #000;
     color: #f5f5f7;
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 120px 0 100px;
+    overflow: hidden;
 }
 
 .ap-hero-inner {
+    position: relative;
+    z-index: 2;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 40px;
+    padding: 120px 40px 100px;
+}
+
+.ap-hero-text {
+    max-width: 500px;
+}
+
+.ap-hero-portrait {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.ap-hero-portrait::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, #000 0%, rgba(0,0,0,0.55) 30%, transparent 65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ap-hero-portrait img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center 10%;
 }
 
 /* hero eyebrow — small label */
@@ -124,16 +157,24 @@ body {
     margin-bottom: 40px;
 }
 
-.ap-hero h1 {
-    font-size: clamp(72px, 11vw, 128px);
+.ap-hero h1,
+.ap-hero-dot-title {
+    font-size: clamp(44px, 5vw, 72px);
     font-weight: 700;
-    line-height: 1.0;
+    line-height: 1.05;
     letter-spacing: -0.05em;
     margin-bottom: 32px;
     background: linear-gradient(160deg, #f5f5f7 30%, #6e6e73 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: translateY(36px);
+    animation: title-rise 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+}
+
+@keyframes title-rise {
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .ap-hero-sub {
@@ -194,6 +235,7 @@ body {
 
 .ap-section-gray {
     background: #f5f5f7;
+    color: #1d1d1f;
 }
 
 .ap-section-inner {
@@ -266,6 +308,31 @@ body {
     font-size: 15px;
     color: #1d1d1f;
     line-height: 1.6;
+}
+
+/* ── Project Groups ──────────────────────────────────────── */
+.ap-project-group {
+    margin-bottom: 72px;
+}
+
+.ap-project-group:last-child {
+    margin-bottom: 0;
+}
+
+.ap-project-group-title {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6e6e73;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.ap-section-dark .ap-project-group-title {
+    color: #aeaeb2;
+    border-bottom-color: rgba(255,255,255,0.1);
 }
 
 /* ── Project Cards ───────────────────────────────────────── */
@@ -550,6 +617,14 @@ body {
     margin: 0;
 }
 
+/* timeline on dark background */
+.ap-section-dark .ap-timeline::before { background: rgba(255,255,255,0.15); }
+.ap-section-dark .ap-timeline-dot { border-color: #000; background: #6e6e73; }
+.ap-section-dark .ap-timeline-period { color: #aeaeb2; }
+.ap-section-dark .ap-timeline-company { color: #f5f5f7; }
+.ap-section-dark .ap-timeline-role { color: #c7c7cc; }
+.ap-section-dark .ap-timeline-loc { color: #6e6e73; }
+
 /* ── Testimonials ────────────────────────────────────────── */
 .ap-testimonials {
     display: grid;
@@ -680,8 +755,8 @@ body {
     .ap-cards { grid-template-columns: 1fr; }
     .ap-section { padding: 80px 0; }
     .ap-section-inner { padding: 0 24px; }
-    .ap-hero { padding: 100px 0 80px; }
-    .ap-hero-inner { padding: 0 24px; }
+    .ap-hero-inner { padding: 100px 24px 80px; }
+    .ap-hero-portrait { left: 55%; }
     .ap-footer { padding: 28px 0; }
     .ap-footer-inner { padding: 0 24px; }
     .ap-nav-inner { padding: 0 24px; }
@@ -690,8 +765,10 @@ body {
 @media (max-width: 600px) {
     .ap-section { padding: 60px 0; }
     .ap-section-inner { padding: 0 20px; }
-    .ap-hero { padding: 100px 0 60px; }
-    .ap-hero-inner { padding: 0 20px; }
+    .ap-hero { align-items: flex-end; }
+    .ap-hero-inner { padding: 60px 20px 60px; }
+    .ap-hero-portrait { left: 0; top: 0; bottom: auto; height: 60vh; }
+    .ap-hero-portrait::before { background: linear-gradient(to bottom, transparent 30%, #000 90%); }
     .ap-footer-inner { padding: 0 20px; }
     .ap-nav-inner { padding: 0 20px; }
     .ap-bio { font-size: 18px; }
