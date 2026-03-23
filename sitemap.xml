@@ -6,7 +6,51 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://karthikpadmanabhan.com/</loc>
-  <lastmod>2018-07-18T14:37:06+00:00</lastmod>
+  <loc>https://karthikpadmanabhan.com/</loc>
+  <lastmod>2026-03-23</lastmod>
+  <priority>1.0</priority>
 </url>
+
+<url>
+  <loc>https://karthikpadmanabhan.com/blog/</loc>
+  <lastmod>2026-03-23</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://karthikpadmanabhan.com/blog/2026/03/22/building-vr-training-simulations/</loc>
+  <lastmod>2026-03-22</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://karthikpadmanabhan.com/blog/2026/03/22/ai-agents-skills-mcp-context-docs/</loc>
+  <lastmod>2026-03-22</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://karthikpadmanabhan.com/blog/2026/02/14/unity-performance-optimization/</loc>
+  <lastmod>2026-02-14</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://karthikpadmanabhan.com/blog/2026/01/08/multiplayer-netcode-lessons/</loc>
+  <lastmod>2026-01-08</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://karthikpadmanabhan.com/blog/2025/11/20/procedural-generation-design/</loc>
+  <lastmod>2025-11-20</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://karthikpadmanabhan.com/blog/2025/10/03/game-feel-juice/</loc>
+  <lastmod>2025-10-03</lastmod>
+  <priority>0.7</priority>
+</url>
+
 </urlset>
