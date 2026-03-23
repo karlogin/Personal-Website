@@ -1,7 +1,13 @@
 {
-    "short_name": "Karthik",
     "name": "Karthik Padmanabhan",
-    "icons": [{
+    "short_name": "Karthik",
+    "description": "Principal Software Engineer — 10+ years shipping games across console, mobile, and VR.",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "icons": [
+        {
             "src": "/icons/android-icon-36x36.png",
             "sizes": "36x36",
             "type": "image/png",
