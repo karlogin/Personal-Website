@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/apple.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV5T4XKX3P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FV5T4XKX3P');
+    </script>
+    <title>{{ page.title }} | Karthik Padmanabhan</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    {% if page.image %}<meta property="og:image" content="{{ site.url }}{{ page.image }}">{% endif %}
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+
+<nav class="ap-nav" id="ap-nav"></nav>
+
+<!-- ── Post hero ─────────────────────────────────────────────── -->
+<header class="ap-post-hero{% if page.image %} ap-post-hero--image{% endif %}"{% if page.image %} style="background-image:url('{{ page.image }}')"{% endif %}>
+    <div class="ap-post-hero-inner">
+        <a href="/blog/" class="ap-post-back">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            Blog
+        </a>
+        {% if page.tags and page.tags.size > 0 %}
+        <div class="ap-post-tags ap-post-tags--light">
+            {% for tag in page.tags %}<span class="ap-post-tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        <h1 class="ap-post-hero-title">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="ap-post-hero-sub">{{ page.subtitle }}</p>{% endif %}
+        <div class="ap-post-hero-meta">
+            <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+            <span class="ap-post-hero-dot">·</span>
+            <span class="ap-post-reading-time"></span>
+        </div>
+    </div>
+</header>
+
+<!-- ── Post body ─────────────────────────────────────────────── -->
+<article class="ap-post">
+    <div class="ap-post-inner">
+        <div class="ap-post-content">
+            {{ content }}
+        </div>
+        <footer class="ap-post-footer">
+            <a href="/blog/" class="ap-post-back ap-post-back--footer">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                Back to Blog
+            </a>
+        </footer>
+    </div>
+</article>
+
+<!-- ── More from the Blog ────────────────────────────────────── -->
+{% assign other_posts = site.posts | where_exp: "p", "p.url != page.url" %}
+{% if other_posts.size > 0 %}
+<section class="ap-post-more">
+    <div class="ap-post-more-inner">
+        <h2 class="ap-post-more-heading">More from the Blog</h2>
+        <div class="ap-blog-grid ap-post-more-grid">
+            {% for post in other_posts limit:3 %}
+            <a href="{{ post.url }}" class="ap-blog-card">
+                {% if post.image %}
+                <div class="ap-blog-card-img" style="background-image:url('{{ post.image }}')"></div>
+                {% else %}
+                <div class="ap-blog-card-img ap-blog-card-img--gradient"></div>
+                {% endif %}
+                <div class="ap-blog-card-body">
+                    {% if post.tags and post.tags.size > 0 %}
+                    <div class="ap-post-tags">
+                        {% for tag in post.tags %}<span class="ap-post-tag">{{ tag }}</span>{% endfor %}
+                    </div>
+                    {% endif %}
+                    <h3 class="ap-blog-card-title">{{ post.title }}</h3>
+                    {% if post.subtitle %}<p class="ap-blog-card-sub">{{ post.subtitle }}</p>{% endif %}
+                    <p class="ap-blog-card-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<footer class="ap-footer" id="ap-footer"></footer>
+
+<script src="/js/layout.js"></script>
+<script>
+(function () {
+    // Reading time estimate
+    var content = document.querySelector('.ap-post-content');
+    var rt = document.querySelector('.ap-post-reading-time');
+    if (content && rt) {
+        var words = content.innerText.trim().split(/\s+/).length;
+        var mins = Math.max(1, Math.round(words / 200));
+        rt.textContent = mins + ' min read';
+    }
+})();
+</script>
+
+</body>
+</html>

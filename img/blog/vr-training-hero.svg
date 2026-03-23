@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#03010a"/>
+      <stop offset="100%" style="stop-color:#08051a"/>
+    </linearGradient>
+    <radialGradient id="glow-a" cx="35%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.28"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow-b" cx="75%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow-c" cx="55%" cy="80%" r="35%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:0.14"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow-a)"/>
+  <rect width="1200" height="630" fill="url(#glow-b)"/>
+  <rect width="1200" height="630" fill="url(#glow-c)"/>
+
+  <!-- Perspective grid floor -->
+  <g stroke="#4f46e5" stroke-width="0.8" opacity="0.25">
+    <!-- Horizontal lines (converging to horizon) -->
+    <line x1="0" y1="630" x2="1200" y2="420"/>
+    <line x1="0" y1="630" x2="1200" y2="480"/>
+    <line x1="0" y1="630" x2="1200" y2="540"/>
+    <line x1="0" y1="630" x2="1200" y2="585"/>
+    <line x1="1200" y1="630" x2="0" y2="420"/>
+    <line x1="1200" y1="630" x2="0" y2="480"/>
+    <line x1="1200" y1="630" x2="0" y2="540"/>
+    <line x1="1200" y1="630" x2="0" y2="585"/>
+    <!-- Vertical convergence lines -->
+    <line x1="600" y1="400" x2="0" y2="630"/>
+    <line x1="600" y1="400" x2="200" y2="630"/>
+    <line x1="600" y1="400" x2="400" y2="630"/>
+    <line x1="600" y1="400" x2="600" y2="630"/>
+    <line x1="600" y1="400" x2="800" y2="630"/>
+    <line x1="600" y1="400" x2="1000" y2="630"/>
+    <line x1="600" y1="400" x2="1200" y2="630"/>
+  </g>
+
+  <!-- Floating UI panels (VR HUD feel) -->
+  <rect x="180" y="160" width="220" height="130" rx="12" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.35"/>
+  <rect x="182" y="162" width="216" height="18" rx="3" fill="#7c3aed" opacity="0.15"/>
+  <line x1="196" y1="200" x2="385" y2="200" stroke="#6d28d9" stroke-width="1" opacity="0.4"/>
+  <line x1="196" y1="218" x2="350" y2="218" stroke="#6d28d9" stroke-width="1" opacity="0.3"/>
+  <line x1="196" y1="236" x2="365" y2="236" stroke="#6d28d9" stroke-width="1" opacity="0.3"/>
+  <line x1="196" y1="254" x2="340" y2="254" stroke="#6d28d9" stroke-width="1" opacity="0.25"/>
+  <!-- Corner brackets -->
+  <path d="M180,160 L180,150 L190,150" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+  <path d="M400,160 L400,150 L390,150" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+  <path d="M180,290 L180,300 L190,300" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+  <path d="M400,290 L400,300 L390,300" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+
+  <rect x="800" y="130" width="200" height="160" rx="12" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.3"/>
+  <rect x="802" y="132" width="196" height="18" rx="3" fill="#4f46e5" opacity="0.12"/>
+  <line x1="816" y1="170" x2="985" y2="170" stroke="#4f46e5" stroke-width="1" opacity="0.35"/>
+  <line x1="816" y1="188" x2="970" y2="188" stroke="#4f46e5" stroke-width="1" opacity="0.25"/>
+  <line x1="816" y1="206" x2="980" y2="206" stroke="#4f46e5" stroke-width="1" opacity="0.25"/>
+  <line x1="816" y1="224" x2="955" y2="224" stroke="#4f46e5" stroke-width="1" opacity="0.2"/>
+  <line x1="816" y1="242" x2="975" y2="242" stroke="#4f46e5" stroke-width="1" opacity="0.2"/>
+  <path d="M800,130 L800,120 L810,120" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.6"/>
+  <path d="M1000,130 L1000,120 L990,120" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.6"/>
+  <path d="M800,290 L800,300 L810,300" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.6"/>
+  <path d="M1000,290 L1000,300 L990,300" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Center reticle / focal point -->
+  <circle cx="600" cy="310" r="60" fill="none" stroke="#c084fc" stroke-width="0.8" opacity="0.25"/>
+  <circle cx="600" cy="310" r="35" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.4"/>
+  <circle cx="600" cy="310" r="6" fill="#c084fc" opacity="0.6"/>
+  <line x1="540" y1="310" x2="565" y2="310" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+  <line x1="635" y1="310" x2="660" y2="310" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+  <line x1="600" y1="250" x2="600" y2="275" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+  <line x1="600" y1="345" x2="600" y2="370" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+
+  <!-- Spatial annotation lines -->
+  <line x1="440" y1="310" x2="370" y2="260" stroke="#7c3aed" stroke-width="1" opacity="0.3" stroke-dasharray="4 3"/>
+  <circle cx="370" cy="260" r="4" fill="#7c3aed" opacity="0.5"/>
+  <line x1="760" y1="310" x2="830" y2="270" stroke="#7c3aed" stroke-width="1" opacity="0.3" stroke-dasharray="4 3"/>
+  <circle cx="830" cy="270" r="4" fill="#7c3aed" opacity="0.5"/>
+  <line x1="600" y1="250" x2="600" y2="190" stroke="#7c3aed" stroke-width="1" opacity="0.3" stroke-dasharray="4 3"/>
+  <circle cx="600" cy="190" r="4" fill="#7c3aed" opacity="0.5"/>
+
+  <!-- Dot grid -->
+  <pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+    <circle cx="18" cy="18" r="0.7" fill="#fff" opacity="0.05"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+</svg>

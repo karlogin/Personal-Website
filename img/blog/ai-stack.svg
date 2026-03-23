@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060608"/>
+      <stop offset="100%" style="stop-color:#0d0d10"/>
+    </linearGradient>
+    <linearGradient id="agent-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#1e3a8a;stop-opacity:0.1"/>
+    </linearGradient>
+    <linearGradient id="skill-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4c1d95;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#4c1d95;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="mcp-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#164e63;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#164e63;stop-opacity:0.08"/>
+    </linearGradient>
+    <linearGradient id="ctx-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#064e3b;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#064e3b;stop-opacity:0.08"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#bg)"/>
+  <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+    <circle cx="16" cy="16" r="0.7" fill="#ffffff" opacity="0.045"/>
+  </pattern>
+  <rect width="900" height="520" fill="url(#dots)"/>
+
+  <!-- Title -->
+  <text x="450" y="44" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#6b7280" text-anchor="middle" letter-spacing="0.08em">THE STACK</text>
+
+  <!-- ── Layer 1: Context Docs (bottom) ── -->
+  <rect x="50" y="408" width="800" height="84" rx="14" fill="url(#ctx-fill)" stroke="#065f46" stroke-width="1.5"/>
+  <rect x="50" y="408" width="5" height="84" rx="3" fill="#059669" opacity="0.8"/>
+  <text x="78" y="442" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" fill="#34d399">Context Docs</text>
+  <text x="78" y="465" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#6b7280">Project rules · Architecture · Conventions · Domain knowledge · System prompts</text>
+  <text x="832" y="453" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5" fill="#059669" text-anchor="end" opacity="0.75">KNOWLEDGE LAYER</text>
+
+  <!-- connector lines bottom → mid -->
+  <line x1="250" y1="408" x2="250" y2="370" stroke="#065f46" stroke-width="1" opacity="0.4" stroke-dasharray="3 3"/>
+  <line x1="650" y1="408" x2="650" y2="370" stroke="#065f46" stroke-width="1" opacity="0.4" stroke-dasharray="3 3"/>
+  <text x="450" y="394" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#374151" text-anchor="middle">grounded by ↓</text>
+
+  <!-- ── Layer 2a: Skills ── -->
+  <rect x="50" y="268" width="385" height="96" rx="14" fill="url(#skill-fill)" stroke="#5b21b6" stroke-width="1.5"/>
+  <rect x="50" y="268" width="5" height="96" rx="3" fill="#7c3aed" opacity="0.8"/>
+  <text x="78" y="304" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" fill="#a78bfa">Skills</text>
+  <text x="78" y="326" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#6b7280">Named, reusable action sequences</text>
+  <text x="78" y="348" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#6b7280">/commit · /deploy · /review · custom</text>
+  <text x="420" y="320" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5" fill="#7c3aed" text-anchor="end" opacity="0.75">PROCEDURE LAYER</text>
+
+  <!-- ── Layer 2b: MCPs ── -->
+  <rect x="465" y="268" width="385" height="96" rx="14" fill="url(#mcp-fill)" stroke="#0e7490" stroke-width="1.5"/>
+  <rect x="465" y="268" width="5" height="96" rx="3" fill="#0891b2" opacity="0.8"/>
+  <text x="493" y="304" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" fill="#22d3ee">MCP</text>
+  <text x="493" y="326" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#6b7280">Standardized tool integrations</text>
+  <text x="493" y="348" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#6b7280">Filesystem · APIs · DBs · Browser</text>
+  <text x="832" y="320" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5" fill="#0891b2" text-anchor="end" opacity="0.75">INTEGRATION LAYER</text>
+
+  <!-- connector lines mid → top -->
+  <line x1="240" y1="268" x2="240" y2="230" stroke="#5b21b6" stroke-width="1" opacity="0.4" stroke-dasharray="3 3"/>
+  <line x1="660" y1="268" x2="660" y2="230" stroke="#0e7490" stroke-width="1" opacity="0.4" stroke-dasharray="3 3"/>
+  <text x="450" y="254" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#374151" text-anchor="middle">uses tools from ↓</text>
+
+  <!-- ── Layer 3: Agent (top) ── -->
+  <rect x="50" y="80" width="800" height="144" rx="14" fill="url(#agent-fill)" stroke="#1d4ed8" stroke-width="1.5"/>
+  <rect x="50" y="80" width="5" height="144" rx="3" fill="#2563eb" opacity="0.8"/>
+  <text x="78" y="120" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" fill="#60a5fa">AI Agent</text>
+  <text x="78" y="146" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#6b7280">Autonomous reasoning loop — sets goals, decides which skills to invoke, which tools to call</text>
+  <text x="78" y="168" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13.5" fill="#6b7280">via MCP, and adapts its plan based on intermediate results until the task is complete.</text>
+  <rect x="78" y="184" width="248" height="26" rx="8" fill="#1e3a8a" opacity="0.5"/>
+  <text x="202" y="201" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#93c5fd" text-anchor="middle">Plan → Act → Observe → Reflect → Repeat</text>
+  <text x="832" y="156" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5" fill="#2563eb" text-anchor="end" opacity="0.75">REASONING LAYER</text>
+
+  <!-- Footer -->
+  <text x="450" y="510" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#374151" text-anchor="middle">Each layer has a distinct responsibility — understanding which to reach for determines whether your system is well-designed.</text>
+</svg>

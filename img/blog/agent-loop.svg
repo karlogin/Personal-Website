@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" width="900" height="460">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060608"/>
+      <stop offset="100%" style="stop-color:#0d0d10"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L0,7 L9,3.5 z" fill="#3b82f6" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="460" fill="url(#bg)"/>
+  <pattern id="grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="0.7" fill="#fff" opacity="0.04"/>
+  </pattern>
+  <rect width="900" height="460" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="450" y="46" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#94a3b8" text-anchor="middle" letter-spacing="0.06em">THE AGENT REASONING LOOP</text>
+
+  <!-- Central dashed ring -->
+  <circle cx="450" cy="245" r="58" fill="none" stroke="#1e3a5f" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="450" y="239" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#3b82f6" text-anchor="middle">AI</text>
+  <text x="450" y="258" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="600" fill="#3b82f6" text-anchor="middle">Agent</text>
+
+  <!-- ── Step nodes ── -->
+  <!-- Plan (top) -->
+  <rect x="355" y="74" width="190" height="66" rx="16" fill="#0f172a" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="108" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600" fill="#a78bfa" text-anchor="middle">Plan</text>
+  <text x="450" y="129" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" fill="#6b7280" text-anchor="middle">Break goal into steps</text>
+
+  <!-- Act (right) -->
+  <rect x="670" y="212" width="190" height="66" rx="16" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="765" y="246" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600" fill="#60a5fa" text-anchor="middle">Act</text>
+  <text x="765" y="267" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" fill="#6b7280" text-anchor="middle">Call skills &amp; MCPs</text>
+
+  <!-- Observe (bottom) -->
+  <rect x="355" y="358" width="190" height="66" rx="16" fill="#0f172a" stroke="#0891b2" stroke-width="1.5"/>
+  <text x="450" y="392" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600" fill="#22d3ee" text-anchor="middle">Observe</text>
+  <text x="450" y="413" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" fill="#6b7280" text-anchor="middle">Read tool output</text>
+
+  <!-- Reflect (left) -->
+  <rect x="40" y="212" width="190" height="66" rx="16" fill="#0f172a" stroke="#059669" stroke-width="1.5"/>
+  <text x="135" y="246" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600" fill="#34d399" text-anchor="middle">Reflect</text>
+  <text x="135" y="267" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" fill="#6b7280" text-anchor="middle">Update plan if needed</text>
+
+  <!-- ── Arrows (clockwise) ── -->
+  <path d="M545,107 Q670,118 670,218" fill="none" stroke="#3b82f6" stroke-width="1.8" opacity="0.5" marker-end="url(#arrow)"/>
+  <path d="M718,278 Q724,350 545,375" fill="none" stroke="#3b82f6" stroke-width="1.8" opacity="0.5" marker-end="url(#arrow)"/>
+  <path d="M355,385 Q222,388 228,278" fill="none" stroke="#3b82f6" stroke-width="1.8" opacity="0.5" marker-end="url(#arrow)"/>
+  <path d="M183,212 Q194,110 355,103" fill="none" stroke="#3b82f6" stroke-width="1.8" opacity="0.5" marker-end="url(#arrow)"/>
+
+  <!-- Context Docs badge -->
+  <rect x="372" y="186" width="156" height="28" rx="9" fill="#0f2a1e" stroke="#059669" stroke-width="1"/>
+  <text x="450" y="205" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#34d399" text-anchor="middle">grounded by context docs</text>
+
+  <!-- Footer note -->
+  <text x="450" y="448" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#374151" text-anchor="middle">Loop continues until the goal is achieved or the agent determines it cannot proceed</text>
+</svg>

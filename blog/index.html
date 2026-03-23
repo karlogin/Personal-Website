@@ -1,0 +1,103 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/apple.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV5T4XKX3P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FV5T4XKX3P');
+    </script>
+    <title>Blog | Karthik Padmanabhan</title>
+    <meta name="description" content="Writing on game development, VR, AI tooling, and software engineering.">
+    <meta property="og:title" content="Blog | Karthik Padmanabhan">
+    <meta property="og:description" content="Writing on game development, VR, AI tooling, and software engineering.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}/blog/">
+    <meta name="twitter:card" content="summary">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+
+<nav class="ap-nav" id="ap-nav"></nav>
+
+<!-- ── Blog hero header ──────────────────────────────────────── -->
+<header class="ap-blog-hero">
+    <div class="ap-blog-hero-inner">
+        <p class="ap-blog-hero-label">Karthik Padmanabhan</p>
+        <h1 class="ap-blog-hero-title">Blog</h1>
+    </div>
+</header>
+
+<main class="ap-blog-main">
+    <div class="ap-blog-main-inner">
+
+        {% if site.posts.size > 0 %}
+
+        <!-- ── Featured post ─────────────────────────────────── -->
+        {% assign featured = site.posts.first %}
+        <a href="{{ featured.url }}" class="ap-blog-featured">
+            {% if featured.image %}
+            <div class="ap-blog-featured-img" style="background-image:url('{{ featured.image }}')"></div>
+            {% else %}
+            <div class="ap-blog-featured-img ap-blog-featured-img--gradient"></div>
+            {% endif %}
+            <div class="ap-blog-featured-body">
+                {% if featured.tags and featured.tags.size > 0 %}
+                <div class="ap-post-tags ap-post-tags--light">
+                    {% for tag in featured.tags %}<span class="ap-post-tag">{{ tag }}</span>{% endfor %}
+                </div>
+                {% endif %}
+                <h2 class="ap-blog-featured-title">{{ featured.title }}</h2>
+                {% if featured.subtitle %}<p class="ap-blog-featured-sub">{{ featured.subtitle }}</p>{% endif %}
+                <p class="ap-blog-featured-date">{{ featured.date | date: "%B %-d, %Y" }}</p>
+            </div>
+        </a>
+
+        <!-- ── Post grid ─────────────────────────────────────── -->
+        {% if site.posts.size > 1 %}
+        <div class="ap-blog-grid">
+            {% for post in site.posts offset:1 %}
+            <a href="{{ post.url }}" class="ap-blog-card">
+                {% if post.image %}
+                <div class="ap-blog-card-img" style="background-image:url('{{ post.image }}')"></div>
+                {% else %}
+                <div class="ap-blog-card-img ap-blog-card-img--gradient"></div>
+                {% endif %}
+                <div class="ap-blog-card-body">
+                    {% if post.tags and post.tags.size > 0 %}
+                    <div class="ap-post-tags">
+                        {% for tag in post.tags %}<span class="ap-post-tag">{{ tag }}</span>{% endfor %}
+                    </div>
+                    {% endif %}
+                    <h3 class="ap-blog-card-title">{{ post.title }}</h3>
+                    {% if post.subtitle %}<p class="ap-blog-card-sub">{{ post.subtitle }}</p>{% endif %}
+                    <p class="ap-blog-card-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% else %}
+        <p class="ap-blog-empty">No posts yet — check back soon.</p>
+        {% endif %}
+
+    </div>
+</main>
+
+<footer class="ap-footer" id="ap-footer"></footer>
+<script src="/js/layout.js"></script>
+</body>
+</html>

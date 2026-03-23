@@ -8,7 +8,7 @@ Static personal portfolio website for Karthik Padmanabhan, deployed via GitHub P
 
 ## Development
 
-**To preview locally**, open `index.html` directly in a browser, or serve it with any static file server:
+**To preview locally**, serve it with a static file server (required — `file://` won't load `js/layout.js` due to CORS):
 
 ```bash
 python3 -m http.server 8000
@@ -18,22 +18,58 @@ There are no tests, no linting tools, and no CI beyond GitHub Pages deployment (
 
 ## CSS Architecture
 
-There are two CSS files, each with a corresponding minified version:
+Single stylesheet with a corresponding minified version:
 
-- [css/style.css](css/style.css) — layout, typography, spacing, responsive breakpoints
-- [css/theme.css](css/theme.css) — colors only, using CSS custom properties defined in `:root`
+- [css/apple.css](css/apple.css) — all styles: layout, typography, spacing, colors, responsive breakpoints
+- [css/apple.min.css](css/apple.min.css) — minified version loaded by HTML files
 
-**Important:** `index.html` loads the `.min.css` versions (`style.min.css`, `theme.min.css`). After editing the source CSS files, the minified files must be updated manually. Use any CSS minifier (e.g., `npx csso-cli`, an online tool, or the VSCode minify extension) and overwrite the corresponding `.min.css` file.
+**Important:** `index.html` and `404.html` load `apple.min.css`. After editing `apple.css`, regenerate the minified file:
 
-Brand-colored links use semantic class names like `.brand-nw`, `.brand-yt`, `.brand-ad`, `.brand-tw`, `.brand-li`, etc. — all defined as CSS variables in `theme.css`.
+```bash
+python3 -c "
+import re
+css = open('css/apple.css').read()
+css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
+css = re.sub(r'\s+', ' ', css)
+css = re.sub(r'\s*([{};:,>~+])\s*', r'\1', css)
+css = re.sub(r';}', '}', css)
+open('css/apple.min.css', 'w').write(css.strip())
+"
+```
+
+## Shared Layout (Nav + Footer)
+
+The nav and footer are defined once in [js/layout.js](js/layout.js) and injected into empty placeholder elements at runtime:
+
+```html
+<nav class="ap-nav" id="ap-nav"></nav>
+...
+<footer class="ap-footer" id="ap-footer"></footer>
+<script src="js/layout.js"></script>
+```
+
+`layout.js` also handles nav scroll behaviour and the Connect dropdown. To update the nav or footer, **only edit `js/layout.js`** — changes apply to all pages automatically.
+
+Nav links are path-aware: on the homepage they use `#about`/`#projects`; on other pages they use `/#about`/`/#projects`.
+
+## Images
+
+- Project images are stored as both `.jpg` (originals) and `.webp` (optimised) in `img/projects/`
+- HTML references `.webp` versions with `loading="lazy"` on all below-fold images
+- The hero portrait is `img/portrait.svg` — an SVG dot-matrix animation (248 KB)
+- To convert new images to WebP: `cwebp -q 82 input.jpg -o output.webp`
 
 ## File Structure
 
 - `index.html` — entire site content (single page)
-- `404.html` / `404.md` — custom 404 page
-- `css/` — source and minified stylesheets
-- `js/` — jQuery, unorphanize plugin, Google Analytics helper (source + minified)
-- `icons/` — favicons and app icons for all platforms
+- `404.html` — custom 404 page
+- `css/apple.css` — source stylesheet
+- `css/apple.min.css` — minified stylesheet (loaded by HTML)
+- `js/layout.js` — shared nav, footer, and common JS behaviours
+- `img/portrait.svg` — hero dot-matrix portrait
+- `img/projects/` — project images (jpg originals + webp)
+- `img/avatars/` — testimonial profile photos
+- `icons/` — favicons and app icons
 - `manifest.json` — PWA web app manifest
 - `CNAME` — custom domain configuration for GitHub Pages
 - `_config.yml` — Jekyll config (only sets `jekyll-theme-cayman`; the actual site bypasses Jekyll layouts via plain HTML)
