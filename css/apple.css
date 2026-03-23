@@ -440,7 +440,7 @@ body {
 
 .ap-cards-light .ap-card {
     background: #fff;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ap-card:hover {
@@ -449,12 +449,14 @@ body {
 }
 
 .ap-cards-light .ap-card:hover {
-    box-shadow: 0 20px 48px rgba(0,0,0,0.18);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.1);
 }
 
 .ap-card-img-wrap {
     overflow: hidden;
-    height: 220px;
+    aspect-ratio: 16 / 9;
+    max-height: 300px;
     flex-shrink: 0;
 }
 
@@ -486,27 +488,27 @@ body {
 }
 
 .ap-card-body {
-    padding: 20px 22px 22px;
+    padding: 24px 28px 28px;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .ap-card-title {
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 600;
     color: #f5f5f7;
-    letter-spacing: -0.015em;
-    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
     line-height: 1.25;
 }
 
 .ap-cards-light .ap-card-title { color: #1d1d1f; }
 
 .ap-card-desc {
-    font-size: 13px;
+    font-size: 14px;
     color: #8e8e93;
-    line-height: 1.55;
+    line-height: 1.45;
     margin-bottom: 16px;
     flex: 1;
 }
@@ -515,7 +517,7 @@ body {
 
 .ap-card-links {
     display: flex;
-    gap: 14px;
+    gap: 6px;
     flex-wrap: wrap;
     border-top: 1px solid rgba(255,255,255,0.07);
     padding-top: 14px;
@@ -526,17 +528,50 @@ body {
 }
 
 .ap-card-link {
-    font-size: 13px;
-    font-weight: 500;
-    color: #2997ff;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #6e6e73;
+    background: rgba(0,0,0,0.06);
+    border-radius: 4px;
+    padding: 3px 8px;
     text-decoration: none;
-    transition: color 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
 .ap-card-link:hover {
-    color: #0077ed;
-    text-decoration: underline;
+    background: rgba(0,0,0,0.1);
+    color: #1d1d1f;
 }
+
+/* Platform colors */
+.ap-card-link[href*="nintendo" i] { background: rgba(228,0,15,0.1); color: #c4000c; }
+.ap-card-link[href*="nintendo" i]:hover { background: rgba(228,0,15,0.18); color: #a30009; }
+
+.ap-card-link[href*="xbox" i] { background: rgba(16,124,16,0.1); color: #0e7a0e; }
+.ap-card-link[href*="xbox" i]:hover { background: rgba(16,124,16,0.18); color: #085e08; }
+
+.ap-card-link[href*="steampowered.com"] { background: rgba(74,159,212,0.12); color: #3a89c0; }
+.ap-card-link[href*="steampowered.com"]:hover { background: rgba(74,159,212,0.22); color: #2a6fa0; }
+
+.ap-card-link[href*="itunes.apple.com"],
+.ap-card-link[href*="apple.co"] { background: rgba(0,0,0,0.08); color: #1d1d1f; }
+.ap-card-link[href*="itunes.apple.com"]:hover,
+.ap-card-link[href*="apple.co"]:hover { background: rgba(0,0,0,0.15); color: #000; }
+
+.ap-card-link[href*="play.google.com"],
+.ap-card-link[href*="market.android.com"] { background: rgba(52,168,83,0.1); color: #1e7e3a; }
+.ap-card-link[href*="play.google.com"]:hover,
+.ap-card-link[href*="market.android.com"]:hover { background: rgba(52,168,83,0.18); color: #155e2a; }
+
+.ap-card-link[href*="youtube.com"],
+.ap-card-link[href*="youtu.be"] { background: rgba(255,0,0,0.08); color: #cc0000; }
+.ap-card-link[href*="youtube.com"]:hover,
+.ap-card-link[href*="youtu.be"]:hover { background: rgba(255,0,0,0.15); color: #aa0000; }
+
+.ap-card-link[href*="microsoft.com"] { background: rgba(0,120,212,0.1); color: #0063b1; }
+.ap-card-link[href*="microsoft.com"]:hover { background: rgba(0,120,212,0.18); color: #004e8c; }
 
 /* ── Contact ─────────────────────────────────────────────── */
 .ap-contact {
