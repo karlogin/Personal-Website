@@ -942,9 +942,9 @@ body {
     .ap-hero-portrait::before { background: linear-gradient(to bottom, transparent 30%, #000 90%); }
     .ap-footer-inner { padding: 0 20px; }
     .ap-nav-inner { padding: 0 20px; }
-    .ap-bio { font-size: 18px; }
-    .ap-skills-group { flex-direction: column; gap: 8px; }
-    .ap-skills-label { min-width: 0; padding-top: 0; }
+    .ap-bio { font-size: 18px; margin-bottom: 28px; }
+    .ap-skills-group { padding: 10px 0; gap: 14px; }
+    .ap-skills-label { min-width: 0; padding-top: 2px; }
 
     /* Timeline: vertical stack on mobile */
     .ap-timeline {
