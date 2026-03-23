@@ -1,31 +1,82 @@
-## Personal Website
+# Personal Website
 
-#### About Me
-**HI, I’M KARTHIK PADMANABHAN.**
+Personal portfolio and blog for **Karthik Padmanabhan** — Principal Software Engineer and Game Developer.
 
-I am a **Passionate Game Designer/Developer** who is looking forward to working in a kick-ass Game Studio. I am currently pursuing my masters' in **Mathematical Computing & Data Analytics** at **Saint Mary's University, Halifax, Canada**. 
+**Live site**: [karthikpadmanabhan.com](https://karthikpadmanabhan.com)
 
-My goal is to create the next big **ML/AI Engine** to be exclusively used for Games. I basically work with both **Unity3D Engine** and **Unreal Engine**. 
+---
 
-__Some of the things that I am good at working with includes UI Programming, Procedural Environment Generation/Population, Multi-Threading, Performance Optimization, and Server Interactions.__
+## About
 
-#### Repository Information
+This repository contains the source for my personal portfolio site. It showcases my game development work, professional experience, and includes a blog covering topics like multiplayer netcode, procedural generation, Unity performance, VR simulations, and AI/ML in games.
 
->This repository contains files to my personal website.
->I have used multiple git servers to create and push the files to my website.
->If you would like to know more about the same, please get in touch with me via Email.
+---
 
->You can basically use the files here as a template. I have tries to keep the code as minimal as needed.
->Most of the code should have comments. If they don't have then it means that I am in the process of adding them.
+## Stack
 
->I have also tried to use GitHub Pages to have a test site.
->The website score a 99% in most web test. I wanna make it score a 100%.
->Also, the website contains more of a informal portfolio style. There is a blog scction thats being worked on actively.
+- **HTML5 / CSS3 / Vanilla JS** — no frameworks, no build tools
+- **Jekyll** — used for the blog (`_posts/`, `_layouts/`)
+- **GitHub Pages** — deployment (pushing to `master` deploys live)
+- **Custom domain** via `CNAME`: `karthikpadmanabhan.com`
 
-GitHub Pages URL: [https://karlogin.github.io/Personal-Website/](https://karlogin.github.io/Personal-Website/)
+---
 
-Website URL: [https://karthikpadmanabhan.com/](https://karthikpadmanabhan.com/)
+## Local Development
 
-The website is built with HTML5, CSS3 & JS.
+Serve with a static file server (required for `js/layout.js` to load — `file://` triggers CORS errors):
 
-Clone URL: [https://github.com/karlogin/Personal-Website.git](https://github.com/karlogin/Personal-Website.git)
+```bash
+python3 -m http.server 8000
+```
+
+To preview the blog with Jekyll rendering:
+
+```bash
+bundle exec jekyll serve
+```
+
+---
+
+## Project Structure
+
+```
+index.html          — portfolio (single page)
+404.html            — custom 404 page
+blog/index.html     — blog listing (Jekyll)
+_posts/             — blog posts in Markdown
+_layouts/post.html  — blog post template
+css/apple.css       — source stylesheet (edit this)
+css/apple.min.css   — minified (regenerate after CSS edits)
+js/layout.js        — shared nav, footer, and interactions
+img/                — portrait SVG, project images, blog SVGs, avatars
+icons/              — favicons and app icons
+manifest.json       — PWA manifest
+_config.yml         — Jekyll configuration
+CNAME               — custom domain
+```
+
+---
+
+## CSS Workflow
+
+Edit `css/apple.css`, then regenerate the minified version:
+
+```bash
+python3 -c "
+import re
+css = open('css/apple.css').read()
+css = re.sub(r'/\*.*?\*/', '', css, flags=re.DOTALL)
+css = re.sub(r'\s+', ' ', css)
+css = re.sub(r'\s*([{};:,>~+])\s*', r'\1', css)
+css = re.sub(r';}', '}', css)
+open('css/apple.min.css', 'w').write(css.strip())
+"
+```
+
+---
+
+## Clone
+
+```bash
+git clone https://github.com/karlogin/Personal-Website.git
+```
