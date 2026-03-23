@@ -934,8 +934,10 @@ body {
 @media (max-width: 600px) {
     .ap-section { padding: 60px 0; }
     .ap-section-inner { padding: 0 20px; }
+    .ap-section-header { margin-bottom: 40px; }
     .ap-hero { align-items: flex-end; }
     .ap-hero-inner { padding: 60px 20px 60px; }
+    .ap-hero-sub { margin-bottom: 16px; }
     .ap-hero-portrait { left: 0; top: 0; bottom: auto; height: 60vh; }
     .ap-hero-portrait::before { background: linear-gradient(to bottom, transparent 30%, #000 90%); }
     .ap-footer-inner { padding: 0 20px; }
@@ -944,6 +946,39 @@ body {
     .ap-skills-group { flex-direction: column; gap: 8px; }
     .ap-skills-label { min-width: 0; padding-top: 0; }
 
+    /* Timeline: vertical stack on mobile */
+    .ap-timeline {
+        flex-direction: column;
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+    .ap-timeline::before { display: none; }
+    .ap-timeline-item {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        min-width: 0;
+        padding: 12px 0;
+        gap: 12px;
+        border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .ap-timeline-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .ap-section-dark .ap-timeline-item { border-bottom-color: rgba(255,255,255,0.08); }
+    .ap-timeline-dot { display: none; }
+    .ap-timeline-period {
+        height: auto;
+        align-items: flex-start;
+        margin-bottom: 0;
+        min-width: 88px;
+        flex-shrink: 0;
+        font-size: 10px;
+        padding-top: 2px;
+    }
+    .ap-timeline-content { text-align: left; }
+}
+
+@media (max-width: 560px) {
+    .ap-nav-links { gap: 20px; }
 }
 
 /* ── Company favicons ──────────────────────────────────────────── */
