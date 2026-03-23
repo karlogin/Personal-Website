@@ -7,9 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" type="text/css" href="/css/apple.min.css">
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV5T4XKX3P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,56 +15,83 @@
         gtag('js', new Date());
         gtag('config', 'G-FV5T4XKX3P');
     </script>
-
     <title>Blog | Karthik Padmanabhan</title>
-
     <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#000000">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-<nav class="ap-nav" id="ap-nav"></nav>
+<nav class="ap-nav scrolled" id="ap-nav"></nav>
 
-<section class="ap-blog-index">
-    <div class="ap-blog-index-inner">
-        <header class="ap-blog-index-header">
-            <span class="ap-eyebrow">Writing</span>
-            <h1 class="ap-blog-index-title">Blog</h1>
-        </header>
+<!-- ── Blog hero header ──────────────────────────────────────── -->
+<header class="ap-blog-hero">
+    <div class="ap-blog-hero-inner">
+        <p class="ap-blog-hero-label">Karthik Padmanabhan</p>
+        <h1 class="ap-blog-hero-title">Blog</h1>
+    </div>
+</header>
+
+<main class="ap-blog-main">
+    <div class="ap-blog-main-inner">
 
         {% if site.posts.size > 0 %}
-        <ul class="ap-post-list">
-            {% for post in site.posts %}
-            <li class="ap-post-item">
-                <a href="{{ post.url }}" class="ap-post-link">
-                    <div class="ap-post-item-meta">
-                        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
-                        {% if post.tags and post.tags.size > 0 %}
-                        <span class="ap-post-tags">
-                            {% for tag in post.tags %}<span class="ap-post-tag">{{ tag }}</span>{% endfor %}
-                        </span>
-                        {% endif %}
+
+        <!-- ── Featured post ─────────────────────────────────── -->
+        {% assign featured = site.posts.first %}
+        <a href="{{ featured.url }}" class="ap-blog-featured">
+            {% if featured.image %}
+            <div class="ap-blog-featured-img" style="background-image:url('{{ featured.image }}')"></div>
+            {% else %}
+            <div class="ap-blog-featured-img ap-blog-featured-img--gradient"></div>
+            {% endif %}
+            <div class="ap-blog-featured-body">
+                {% if featured.tags and featured.tags.size > 0 %}
+                <div class="ap-post-tags ap-post-tags--light">
+                    {% for tag in featured.tags %}<span class="ap-post-tag">{{ tag }}</span>{% endfor %}
+                </div>
+                {% endif %}
+                <h2 class="ap-blog-featured-title">{{ featured.title }}</h2>
+                {% if featured.subtitle %}<p class="ap-blog-featured-sub">{{ featured.subtitle }}</p>{% endif %}
+                <p class="ap-blog-featured-date">{{ featured.date | date: "%B %-d, %Y" }}</p>
+            </div>
+        </a>
+
+        <!-- ── Post grid ─────────────────────────────────────── -->
+        {% if site.posts.size > 1 %}
+        <div class="ap-blog-grid">
+            {% for post in site.posts offset:1 %}
+            <a href="{{ post.url }}" class="ap-blog-card">
+                {% if post.image %}
+                <div class="ap-blog-card-img" style="background-image:url('{{ post.image }}')"></div>
+                {% else %}
+                <div class="ap-blog-card-img ap-blog-card-img--gradient"></div>
+                {% endif %}
+                <div class="ap-blog-card-body">
+                    {% if post.tags and post.tags.size > 0 %}
+                    <div class="ap-post-tags">
+                        {% for tag in post.tags %}<span class="ap-post-tag">{{ tag }}</span>{% endfor %}
                     </div>
-                    <h2 class="ap-post-item-title">{{ post.title }}</h2>
-                    {% if post.subtitle %}<p class="ap-post-item-subtitle">{{ post.subtitle }}</p>{% endif %}
-                    <p class="ap-post-item-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-                </a>
-            </li>
+                    {% endif %}
+                    <h3 class="ap-blog-card-title">{{ post.title }}</h3>
+                    {% if post.subtitle %}<p class="ap-blog-card-sub">{{ post.subtitle }}</p>{% endif %}
+                    <p class="ap-blog-card-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+                </div>
+            </a>
             {% endfor %}
-        </ul>
-        {% else %}
-        <p class="ap-blog-empty">No posts yet. Check back soon.</p>
+        </div>
         {% endif %}
+
+        {% else %}
+        <p class="ap-blog-empty">No posts yet — check back soon.</p>
+        {% endif %}
+
     </div>
-</section>
+</main>
 
 <footer class="ap-footer" id="ap-footer"></footer>
-
 <script src="/js/layout.js"></script>
-
 </body>
 </html>
