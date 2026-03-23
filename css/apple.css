@@ -941,6 +941,8 @@ body {
     .ap-footer-inner { padding: 0 20px; }
     .ap-nav-inner { padding: 0 20px; }
     .ap-bio { font-size: 18px; }
+    .ap-skills-group { flex-direction: column; gap: 8px; }
+    .ap-skills-label { min-width: 0; padding-top: 0; }
 
 }
 
