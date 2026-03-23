@@ -17,7 +17,7 @@ In single-player, your game state is authoritative. You set `player.position = n
 
 The first instinct is to just send everything and wait. This works fine on a LAN. On the internet it looks like your game is running underwater.
 
-The solution that actually ships: **client-side prediction with server reconciliation**. The client applies input immediately (so it feels responsive) and sends that input to the server. The server runs the same simulation, responds with the authoritative result, and the client corrects any divergence. The correction needs to be smooth — hard snapping is jarring; blending over a few frames is invisible.
+The solution that actually ships: **client-side prediction with server reconciliation**. The client applies input immediately (so it feels responsive) and sends that input to the server. The server runs the same simulation, responds with the authoritative result, and the client corrects any divergence. The correction needs to be smooth, hard snapping is jarring; blending over a few frames is invisible.
 
 ![Client prediction diagram: input is applied locally, sent to server, and reconciled against authoritative state](/img/blog/client-prediction.svg)
 
@@ -34,11 +34,11 @@ The tradeoff matrix depends entirely on genre:
 
 Understanding which axis your game lives on determines your entire network architecture.
 
-## The server is the source of truth — always
+## The server is the source of truth: always
 
 The single worst decision in a networked game is trusting the client. Clients cheat. Not all of them, but enough that if cheating is possible, it will happen. The patterns are always the same: send fake positions (teleporting), send fake inputs (auto-aim), suppress sends (lag exploitation).
 
-Server-authoritative simulation means the server runs the real game simulation. Clients send inputs; they receive state. They render what the server tells them, with prediction layered on top for feel. Anything that matters — scoring, collision, hit detection — runs on the server.
+Server-authoritative simulation means the server runs the real game simulation. Clients send inputs; they receive state. They render what the server tells them, with prediction layered on top for feel. Anything that matters, scoring, collision, hit detection, runs on the server.
 
 This constraint also improves your architecture in non-multiplayer ways. When the server is the source of truth, your game state becomes clean and testable. You can replay a session by replaying its inputs. You can run headless simulations for AI training. You naturally separate rendering (client concern) from simulation (server concern).
 
@@ -46,7 +46,7 @@ This constraint also improves your architecture in non-multiplayer ways. When th
 
 Even with good netcode, remote players will have choppy movement if you render them at the exact position reported in the last state packet. Network updates arrive at irregular intervals; rendering runs at 60+ fps.
 
-Interpolation holds the remote player slightly in the past (by one or two packet intervals) and smoothly moves them between received positions. The cost is a small constant delay in how you perceive remote players — usually 50-100ms. The benefit is smooth, predictable movement that players read as "good netcode" even when the network itself isn't great.
+Interpolation holds the remote player slightly in the past (by one or two packet intervals) and smoothly moves them between received positions. The cost is a small constant delay in how you perceive remote players, usually 50-100ms. The benefit is smooth, predictable movement that players read as "good netcode" even when the network itself isn't great.
 
 The subtlety is that interpolation and prediction apply to different entities: **local player** uses prediction (so your own input feels instant), **remote players** use interpolation (so their movement looks smooth).
 
