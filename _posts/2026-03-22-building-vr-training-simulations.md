@@ -4,6 +4,7 @@ title: "Building VR Training Simulations in Unity"
 subtitle: "Lessons learned from shipping immersive learning experiences on Oculus Quest"
 date: 2026-03-22
 tags: [Unity, VR, Oculus Quest]
+image: /img/blog/vr-training-hero.svg
 ---
 
 Virtual reality training simulations are one of the most compelling applications of game development technology outside of games themselves. Over my time at SilverbackVR, I shipped several VR training applications for enterprise clients — and the lessons learned are quite different from shipping a consumer game.
@@ -32,6 +33,8 @@ Game designers optimize for *flow* — that satisfying state where challenge mee
 This changes how you structure interactions. In a game, failure is a learning mechanism. In a training sim, repeated failure is demoralizing and erodes trust in the system.
 
 The pattern that worked best: **guided practice first, assessed practice second**. Show the learner the correct procedure with spatial annotations, let them repeat it with decreasing guidance, then assess without any hints.
+
+![Three-phase learning flow: Guided Practice, Decreasing Hints, Assessed Practice](/img/blog/vr-practice-flow.svg)
 
 ## Middleware tools matter
 

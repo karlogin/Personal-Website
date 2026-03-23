@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0004"/>
+      <stop offset="100%" style="stop-color:#100308"/>
+    </linearGradient>
+    <radialGradient id="glow-a" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" style="stop-color:#e11d48;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow-b" cx="25%" cy="55%" r="35%">
+      <stop offset="0%" style="stop-color:#f43f5e;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow-c" cx="75%" cy="45%" r="35%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="burst" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fb7185;stop-opacity:0.4"/>
+      <stop offset="60%" style="stop-color:#e11d48;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="blur-sm"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow-a)"/>
+  <rect width="1200" height="630" fill="url(#glow-b)"/>
+  <rect width="1200" height="630" fill="url(#glow-c)"/>
+
+  <!-- Impact burst at center -->
+  <circle cx="600" cy="315" r="80" fill="url(#burst)"/>
+  <circle cx="600" cy="315" r="40" fill="#e11d48" opacity="0.12" filter="url(#blur-sm)"/>
+
+  <!-- Radial burst lines -->
+  <g stroke="#fb7185" fill="none">
+    <line x1="600" y1="315" x2="700" y2="215" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="315" x2="720" y2="315" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="315" x2="700" y2="415" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="315" x2="600" y2="435" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="315" x2="500" y2="415" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="315" x2="480" y2="315" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="315" x2="500" y2="215" stroke-width="1.5" opacity="0.5"/>
+    <line x1="600" y1="315" x2="600" y2="195" stroke-width="1.5" opacity="0.5"/>
+    <!-- Secondary burst -->
+    <line x1="600" y1="315" x2="760" y2="255" stroke-width="1" opacity="0.3"/>
+    <line x1="600" y1="315" x2="770" y2="375" stroke-width="1" opacity="0.3"/>
+    <line x1="600" y1="315" x2="650" y2="460" stroke-width="1" opacity="0.3"/>
+    <line x1="600" y1="315" x2="440" y2="430" stroke-width="1" opacity="0.3"/>
+    <line x1="600" y1="315" x2="430" y2="255" stroke-width="1" opacity="0.3"/>
+    <line x1="600" y1="315" x2="550" y2="175" stroke-width="1" opacity="0.3"/>
+    <line x1="600" y1="315" x2="740" y2="175" stroke-width="1" opacity="0.25"/>
+    <line x1="600" y1="315" x2="460" y2="165" stroke-width="1" opacity="0.25"/>
+  </g>
+
+  <!-- Particles flying outward -->
+  <g fill="#fb7185">
+    <circle cx="720" cy="215" r="5" opacity="0.7"/>
+    <circle cx="750" cy="320" r="4" opacity="0.6"/>
+    <circle cx="710" cy="425" r="5" opacity="0.7"/>
+    <circle cx="600" cy="455" r="4" opacity="0.6"/>
+    <circle cx="490" cy="425" r="5" opacity="0.7"/>
+    <circle cx="450" cy="320" r="4" opacity="0.6"/>
+    <circle cx="490" cy="215" r="5" opacity="0.7"/>
+    <circle cx="600" cy="180" r="4" opacity="0.6"/>
+    <!-- Outer ring particles -->
+    <circle cx="790" cy="175" r="3.5" opacity="0.5"/>
+    <circle cx="820" cy="375" r="3" opacity="0.45"/>
+    <circle cx="660" cy="490" r="3.5" opacity="0.5"/>
+    <circle cx="420" cy="460" r="3" opacity="0.45"/>
+    <circle cx="380" cy="250" r="3.5" opacity="0.5"/>
+    <circle cx="550" cy="145" r="3" opacity="0.45"/>
+    <circle cx="770" cy="140" r="3" opacity="0.4"/>
+    <circle cx="870" cy="290" r="2.5" opacity="0.35"/>
+    <circle cx="350" cy="360" r="2.5" opacity="0.35"/>
+  </g>
+
+  <!-- Waveform lines (screen shake / feedback) -->
+  <g fill="none" stroke="#f43f5e" opacity="0.35">
+    <!-- Sinusoidal squash/stretch wave across bottom -->
+    <path d="M100,520 C150,490 200,550 250,520 C300,490 350,550 400,520 C450,490 500,550 550,520 C600,490 650,550 700,520 C750,490 800,550 850,520 C900,490 950,550 1000,520 C1050,490 1100,550 1150,520" stroke-width="1.5"/>
+    <!-- Fade version above -->
+    <path d="M100,490 C150,470 200,510 250,490 C300,470 350,510 400,490 C450,470 500,510 550,490 C600,470 650,510 700,490 C750,470 800,510 850,490 C900,470 950,510 1000,490 C1050,470 1100,510 1150,490" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- Center impact circle -->
+  <circle cx="600" cy="315" r="18" fill="#e11d48" opacity="0.6"/>
+  <circle cx="600" cy="315" r="10" fill="#fb7185" opacity="0.8"/>
+
+  <pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+    <circle cx="18" cy="18" r="0.7" fill="#fff" opacity="0.04"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+</svg>

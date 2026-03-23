@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060608"/>
+      <stop offset="100%" style="stop-color:#0d0d10"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="400" fill="url(#bg)"/>
+  <pattern id="grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="15" cy="15" r="0.7" fill="#fff" opacity="0.04"/>
+  </pattern>
+  <rect width="900" height="400" fill="url(#grid)"/>
+
+  <!-- Title -->
+  <text x="450" y="44" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#94a3b8" text-anchor="middle" letter-spacing="0.06em">MCP AS THE INTEGRATION LAYER</text>
+
+  <!-- AI Model box -->
+  <rect x="40" y="120" width="190" height="148" rx="16" fill="#0f172a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="135" y="172" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#60a5fa" text-anchor="middle">AI Model</text>
+  <text x="135" y="196" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Claude, GPT…</text>
+  <text x="135" y="217" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">Reasoning engine</text>
+  <text x="135" y="238" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#6b7280" text-anchor="middle">with tool-calling</text>
+
+  <!-- Arrow AI → MCP (bidirectional) -->
+  <line x1="230" y1="194" x2="310" y2="194" stroke="#3b82f6" stroke-width="2" opacity="0.5"/>
+  <polygon points="305,188 320,194 305,200" fill="#3b82f6" opacity="0.7"/>
+  <polygon points="235,188 220,194 235,200" fill="#3b82f6" opacity="0.5"/>
+  <text x="265" y="184" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#475569" text-anchor="middle">JSON-RPC</text>
+
+  <!-- MCP box (center) -->
+  <rect x="310" y="88" width="190" height="216" rx="16" fill="#071520" stroke="#0891b2" stroke-width="2"/>
+  <text x="405" y="132" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="700" fill="#22d3ee" text-anchor="middle">MCP</text>
+  <text x="405" y="152" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Model Context Protocol</text>
+  <line x1="330" y1="168" x2="480" y2="168" stroke="#164e63" stroke-width="1"/>
+  <text x="405" y="192" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Tool discovery</text>
+  <text x="405" y="213" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Input/output schema</text>
+  <text x="405" y="234" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Auth &amp; permissions</text>
+  <text x="405" y="255" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">Standardized calls</text>
+
+  <!-- Arrows MCP → Tools -->
+  <line x1="500" y1="148" x2="572" y2="128" stroke="#0891b2" stroke-width="1.8" opacity="0.55"/>
+  <polygon points="565,120 578,127 568,136" fill="#0891b2" opacity="0.7"/>
+  <line x1="500" y1="194" x2="572" y2="194" stroke="#0891b2" stroke-width="1.8" opacity="0.55"/>
+  <polygon points="567,188 582,194 567,200" fill="#0891b2" opacity="0.7"/>
+  <line x1="500" y1="240" x2="572" y2="262" stroke="#0891b2" stroke-width="1.8" opacity="0.55"/>
+  <polygon points="565,254 578,262 567,270" fill="#0891b2" opacity="0.7"/>
+
+  <!-- Tool boxes -->
+  <rect x="572" y="96" width="164" height="60" rx="13" fill="#0f172a" stroke="#374151" stroke-width="1"/>
+  <text x="654" y="124" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" fill="#d1d5db" text-anchor="middle">Filesystem</text>
+  <text x="654" y="143" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Read / Write files</text>
+
+  <rect x="572" y="170" width="164" height="60" rx="13" fill="#0f172a" stroke="#374151" stroke-width="1"/>
+  <text x="654" y="198" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" fill="#d1d5db" text-anchor="middle">APIs</text>
+  <text x="654" y="217" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">GitHub, Slack, etc.</text>
+
+  <rect x="572" y="244" width="164" height="60" rx="13" fill="#0f172a" stroke="#374151" stroke-width="1"/>
+  <text x="654" y="272" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500" fill="#d1d5db" text-anchor="middle">Databases</text>
+  <text x="654" y="291" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Query &amp; mutate</text>
+
+  <!-- More tools -->
+  <rect x="572" y="318" width="164" height="44" rx="11" fill="#0a0a0c" stroke="#1f2937" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="654" y="345" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#374151" text-anchor="middle">+ any tool server</text>
+
+  <!-- Caption -->
+  <text x="450" y="388" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#374151" text-anchor="middle">Without MCP: each tool needs a custom integration. With MCP: one protocol, any tool.</text>
+</svg>
