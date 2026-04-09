@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="AI Lab — personal AI tools and experiments by Karthik Padmanabhan, Principal Software Engineer at Zynga.">
+<link rel="canonical" href="https://karthikpadmanabhan.com/lab">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://karthikpadmanabhan.com/lab">
+<meta property="og:title" content="AI Lab — Karthik Padmanabhan">
+<meta property="og:description" content="Personal AI tools and experiments. Built with Claude API.">
+
+<link rel="stylesheet" type="text/css" href="css/apple.min.css">
+
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV5T4XKX3P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-FV5T4XKX3P');
+</script>
+
+<title>AI Lab — Karthik Padmanabhan</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#000000">
+<link rel="shortcut icon" href="./icons/favicon-32x32.png" type="image/png">
+
+<style>
+  .ap-lab-hero {
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--ap-border, rgba(0,0,0,0.08));
+  }
+  .ap-lab-hero-inner {
+    max-width: var(--ap-content-width, 1080px);
+    margin: 0 auto;
+    padding: 0 var(--ap-side-pad, 32px);
+  }
+  .ap-lab-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    font-size: 13px;
+  }
+  .ap-lab-breadcrumb a {
+    color: var(--ap-text-secondary, #888);
+    text-decoration: none;
+  }
+  .ap-lab-breadcrumb a:hover { color: var(--ap-text, #111); }
+  .ap-lab-breadcrumb-sep { color: var(--ap-text-secondary, #888); }
+  .ap-lab-breadcrumb-current { color: var(--ap-text-secondary, #888); }
+  .ap-lab-title {
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+  .ap-lab-subtitle {
+    font-size: 17px;
+    color: var(--ap-text-secondary, #888);
+    max-width: 560px;
+    line-height: 1.65;
+  }
+  .ap-lab-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--ap-border, rgba(0,0,0,0.08));
+    flex-wrap: wrap;
+  }
+  .ap-lab-stat-label {
+    font-size: 12px;
+    color: var(--ap-text-secondary, #888);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .ap-lab-stat-value {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .ap-card-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .ap-card-status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .ap-card-status--live .ap-card-status-dot { background: #34a853; }
+  .ap-card-status--live { color: #34a853; }
+  .ap-card-status--wip .ap-card-status-dot { background: #fbbc04; }
+  .ap-card-status--wip { color: #9a7d0a; }
+  .ap-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .ap-card-tag {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ap-text-secondary, #888);
+    background: var(--ap-bg-secondary, rgba(0,0,0,0.04));
+    border: 1px solid var(--ap-border, rgba(0,0,0,0.08));
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  .ap-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .ap-card-year {
+    font-size: 12px;
+    color: var(--ap-text-secondary, #888);
+  }
+  .ap-lab-placeholder-img {
+    background: #0a0a0a;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ap-lab-placeholder-mark {
+    width: 48px; height: 48px;
+    background: #c8f04a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+</head>
+<body>
+
+<nav class="ap-nav" id="ap-nav"></nav>
+
+<!-- ── Hero ── -->
+<div class="ap-lab-hero">
+  <div class="ap-lab-hero-inner">
+    <div class="ap-lab-breadcrumb ap-reveal">
+      <a href="/">Karthik Padmanabhan</a>
+      <span class="ap-lab-breadcrumb-sep">›</span>
+      <span class="ap-lab-breadcrumb-current">AI Lab</span>
+    </div>
+    <h1 class="ap-lab-title ap-reveal ap-reveal-delay-1">AI Lab.</h1>
+    <p class="ap-lab-subtitle ap-reveal ap-reveal-delay-2">Personal tools and experiments at the intersection of AI and everyday workflows. Each project uses Claude as the reasoning engine — direct API, no platforms.</p>
+    <div class="ap-lab-stats ap-reveal ap-reveal-delay-2">
+      <div>
+        <div class="ap-lab-stat-label">Engine</div>
+        <div class="ap-lab-stat-value">Anthropic Claude</div>
+      </div>
+      <div>
+        <div class="ap-lab-stat-label">Live</div>
+        <div class="ap-lab-stat-value">1 Project</div>
+      </div>
+      <div>
+        <div class="ap-lab-stat-label">Type</div>
+        <div class="ap-lab-stat-value">Personal / Open Source</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Projects ── -->
+<section id="projects" class="ap-section ap-section-gray">
+  <div class="ap-section-inner">
+    <div class="ap-section-header ap-reveal">
+      <span class="ap-eyebrow">Projects</span>
+    </div>
+
+    <div class="ap-project-group ap-reveal">
+      <h3 class="ap-project-group-title">Chrome Extensions</h3>
+      <div class="ap-cards ap-cards-light">
+
+        <div class="ap-card ap-reveal ap-reveal-delay-1">
+          <div class="ap-card-img-wrap">
+            <div class="ap-lab-placeholder-img">
+              <div class="ap-lab-placeholder-mark">
+                <svg width="24" height="24" viewBox="0 0 14 14" fill="none">
+                  <path d="M2 2h10v2L7 9 2 4V2z" fill="#000"/>
+                  <rect x="5" y="9" width="4" height="3" fill="#000"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="ap-card-body">
+            <div class="ap-card-meta">
+              <div class="ap-card-status ap-card-status--live">
+                <span class="ap-card-status-dot"></span> Live
+              </div>
+              <span class="ap-card-year">2025</span>
+            </div>
+            <h3 class="ap-card-title">Bookmark AI</h3>
+            <p class="ap-card-desc">Chrome extension that renames bookmarks to match the naming convention of their destination folder and automatically sorts new saves from a stash folder into the most relevant location. Convention detection is progressive — Claude samples existing titles to infer casing, verbosity, and structure before renaming.</p>
+            <div class="ap-card-tags">
+              <span class="ap-card-tag">Chrome Extension</span>
+              <span class="ap-card-tag">Claude API</span>
+              <span class="ap-card-tag">MV3</span>
+              <span class="ap-card-tag">JavaScript</span>
+            </div>
+            <div class="ap-card-links">
+              <a href="https://chromewebstore.google.com/detail/bddfekiomemomelbmegjilpeogfomafi" class="ap-card-link" target="_blank" rel="noopener noreferrer">Chrome Store</a>
+              <a href="https://karlogin.github.io/chrome-bookmark-ai" class="ap-card-link" target="_blank" rel="noopener noreferrer">Site</a>
+              <a href="https://github.com/karlogin/chrome-bookmark-ai" class="ap-card-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ap-card ap-reveal ap-reveal-delay-2" style="opacity:0.4;">
+          <div class="ap-card-body" style="padding-top:32px;">
+            <div class="ap-card-meta">
+              <div class="ap-card-status ap-card-status--wip">
+                <span class="ap-card-status-dot"></span> In Progress
+              </div>
+              <span class="ap-card-year">2025</span>
+            </div>
+            <h3 class="ap-card-title">More coming.</h3>
+            <p class="ap-card-desc">More AI tools in the pipeline. Watch this space.</p>
+            <div class="ap-card-tags">
+              <span class="ap-card-tag">Claude API</span>
+              <span class="ap-card-tag">TBD</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="ap-footer" id="ap-footer"></footer>
+
+<script src="js/layout.js" defer></script>
+<script>
+(function () {
+  var reveals = document.querySelectorAll('.ap-reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { observer.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('visible'); });
+  }
+})();
+</script>
+
+</body>
+</html>
