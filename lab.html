@@ -34,19 +34,19 @@ gtag('config', 'G-FV5T4XKX3P');
 
 <style>
   .ap-lab-hero {
-    padding: 80px 0 64px;
+    padding: 48px 0 48px;
     border-bottom: 1px solid var(--ap-border, rgba(0,0,0,0.08));
   }
   .ap-lab-hero-inner {
-    max-width: var(--ap-content-width, 1080px);
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 var(--ap-side-pad, 32px);
+    padding: 0 32px;
   }
   .ap-lab-breadcrumb {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     font-size: 13px;
   }
   .ap-lab-breadcrumb a {
@@ -61,7 +61,7 @@ gtag('config', 'G-FV5T4XKX3P');
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.05;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
   .ap-lab-subtitle {
     font-size: 17px;
@@ -72,8 +72,8 @@ gtag('config', 'G-FV5T4XKX3P');
   .ap-lab-stats {
     display: flex;
     gap: 40px;
-    margin-top: 48px;
-    padding-top: 40px;
+    margin-top: 36px;
+    padding-top: 32px;
     border-top: 1px solid var(--ap-border, rgba(0,0,0,0.08));
     flex-wrap: wrap;
   }
@@ -133,9 +133,10 @@ gtag('config', 'G-FV5T4XKX3P');
     font-size: 12px;
     color: var(--ap-text-secondary, #888);
   }
+  /* Fix: placeholder image — fixed height, no extra space */
   .ap-lab-placeholder-img {
     background: #0a0a0a;
-    min-height: 160px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,6 +147,17 @@ gtag('config', 'G-FV5T4XKX3P');
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  /* Fix: "More coming" card — match height of Bookmark AI card */
+  .ap-card--placeholder {
+    display: flex;
+    flex-direction: column;
+  }
+  .ap-card--placeholder .ap-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 </style>
 </head>
@@ -225,8 +237,8 @@ gtag('config', 'G-FV5T4XKX3P');
           </div>
         </div>
 
-        <div class="ap-card ap-reveal ap-reveal-delay-2" style="opacity:0.4;">
-          <div class="ap-card-body" style="padding-top:32px;">
+        <div class="ap-card ap-card--placeholder ap-reveal ap-reveal-delay-2" style="opacity:0.4;">
+          <div class="ap-card-body">
             <div class="ap-card-meta">
               <div class="ap-card-status ap-card-status--wip">
                 <span class="ap-card-status-dot"></span> In Progress
